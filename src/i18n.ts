@@ -17,7 +17,9 @@ interface Strings {
   intro: string;
   navCourses: string;
   navAbout: string;
-  switchTo: string;
+  languageLabel: string;
+  toDarkTheme: string;
+  toLightTheme: string;
   filterTopic: string;
   filterLevel: string;
   filterFreeOnly: string;
@@ -48,7 +50,9 @@ export const STRINGS: Record<Locale, Strings> = {
       'A short, hand-picked list of video courses on security, networks and automation. Each one has a note from me on why it helped. Every link goes to the original page.',
     navCourses: 'Courses',
     navAbout: 'About',
-    switchTo: 'Italiano',
+    languageLabel: 'Language',
+    toDarkTheme: 'Switch to the dark theme',
+    toLightTheme: 'Switch to the light theme',
     filterTopic: 'Topic',
     filterLevel: 'Level',
     filterFreeOnly: 'Free only',
@@ -74,7 +78,7 @@ export const STRINGS: Record<Locale, Strings> = {
       },
       {
         heading: 'Privacy',
-        body: 'No cookies, no analytics, no third-party fonts or scripts. For YouTube courses, the thumbnail is loaded straight from YouTube’s image server, which therefore sees your IP address; this site sends no referrer with that request. Nothing else is loaded from any platform until you click a link, and what happens after that is governed by their own policies.',
+        body: 'No cookies, no analytics, no third-party fonts or scripts. For YouTube courses, the thumbnail is loaded straight from YouTube’s image server, which therefore sees your IP address; this site sends no referrer with that request. Nothing else is loaded from any platform until you click a link, and what happens after that is governed by their own policies. If you choose a theme with the toggle, that choice is saved only in your own browser and never sent anywhere.',
       },
       {
         heading: 'Independence',
@@ -109,7 +113,9 @@ export const STRINGS: Record<Locale, Strings> = {
       'Un elenco breve e scelto a mano di videocorsi su sicurezza, reti e automazione. Per ognuno trovi una mia nota sul perché mi è servito. Ogni link porta alla pagina originale.',
     navCourses: 'Corsi',
     navAbout: 'Informazioni',
-    switchTo: 'English',
+    languageLabel: 'Lingua',
+    toDarkTheme: 'Passa al tema scuro',
+    toLightTheme: 'Passa al tema chiaro',
     filterTopic: 'Argomento',
     filterLevel: 'Livello',
     filterFreeOnly: 'Solo gratuiti',
@@ -135,7 +141,7 @@ export const STRINGS: Record<Locale, Strings> = {
       },
       {
         heading: 'Privacy',
-        body: 'Nessun cookie, nessuna analisi, nessun font o script di terzi. Per i corsi YouTube la miniatura viene caricata direttamente dal server di immagini di YouTube, che quindi vede il tuo indirizzo IP; il sito non invia alcun referrer con quella richiesta. Nient’altro viene caricato da una piattaforma finché non clicchi un link; da lì in poi valgono le loro regole.',
+        body: 'Nessun cookie, nessuna analisi, nessun font o script di terzi. Per i corsi YouTube la miniatura viene caricata direttamente dal server di immagini di YouTube, che quindi vede il tuo indirizzo IP; il sito non invia alcun referrer con quella richiesta. Nient’altro viene caricato da una piattaforma finché non clicchi un link; da lì in poi valgono le loro regole. Se scegli un tema con l’interruttore, la scelta resta solo nel tuo browser e non viene mai inviata.',
       },
       {
         heading: 'Indipendenza',

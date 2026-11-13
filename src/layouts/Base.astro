@@ -3,6 +3,9 @@ import '@fontsource-variable/hanken-grotesk/wght.css';
 import '../styles/global.css';
 import { STRINGS, otherLocale, type Locale } from '../i18n';
 
+// The switch always reads IT | EN, whichever language the page is in.
+const SWITCH_ORDER: Locale[] = ['it', 'en'];
+
 interface Props {
   locale: Locale;
   page: 'courses' | 'about';
@@ -34,6 +37,13 @@ const pageDescription = description ?? t.tagline;
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <link rel="alternate" hreflang={locale} href={`${base}/${locale}/${path}`} />
     <link rel="alternate" hreflang={other} href={`${base}/${other}/${path}`} />
+    <!-- Apply a saved theme choice before the first paint, so the page never flashes the other theme. -->
+    <script is:inline>
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <a class="skip" href="#content">
@@ -51,10 +61,61 @@ const pageDescription = description ?? t.tagline;
           <a href={`${base}/${locale}/about/`} aria-current={page === 'about' ? 'page' : undefined}>
             {t.navAbout}
           </a>
-          <a href={`${base}/${other}/${path}`} lang={other} hreflang={other}>
-            {t.switchTo}
-          </a>
         </nav>
+        <div class="tools">
+          <div class="lang" role="group" aria-label={t.languageLabel}>
+            {SWITCH_ORDER.map((code, i) => (
+              <>
+                {i > 0 && (
+                  <span class="sep" aria-hidden="true">
+                    |
+                  </span>
+                )}
+                <a
+                  href={`${base}/${code}/${path}`}
+                  lang={code}
+                  hreflang={code}
+                  aria-current={code === locale ? 'true' : undefined}
+                >
+                  {code.toUpperCase()}
+                </a>
+              </>
+            ))}
+          </div>
+          <button
+            type="button"
+            class="theme"
+            id="theme-toggle"
+            hidden
+            data-to-dark={t.toDarkTheme}
+            data-to-light={t.toLightTheme}
+          >
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main id="content">
@@ -70,5 +131,33 @@ const pageDescription = description ?? t.tagline;
         </a>
       </div>
     </footer>
+    <script is:inline>
+      // The toggle only exists for readers whose browser runs this script; without it the page follows the system theme.
+      (function () {
+        var button = document.getElementById('theme-toggle');
+        if (!button) return;
+        button.hidden = false;
+        var root = document.documentElement;
+        var system = window.matchMedia('(prefers-color-scheme: dark)');
+        function current() {
+          return root.dataset.theme || (system.matches ? 'dark' : 'light');
+        }
+        function sync() {
+          var dark = current() === 'dark';
+          button.dataset.state = dark ? 'dark' : 'light';
+          button.setAttribute('aria-label', dark ? button.dataset.toLight : button.dataset.toDark);
+        }
+        button.addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = next;
+          try {
+            localStorage.setItem('theme', next);
+          } catch (e) {}
+          sync();
+        });
+        system.addEventListener('change', sync);
+        sync();
+      })();
+    </script>
   </body>
 </html>

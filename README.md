@@ -13,7 +13,7 @@ Course data is a handful of small YAML files, so adding a course means adding on
 
 - Lists courses with title, author, platform, level, topics, duration, price (free or paid) and a note in English and Italian.
 - Filters by topic, level and "free only", with plain JavaScript that is optional: without it, every course stays visible.
-- Hangs each course as a cover with a small label, like works on a gallery wall: a YouTube thumbnail for a YouTube video or playlist, and a typographic cover (the course title on a deep tone per first topic) for other platforms. Light and dark themes follow the reader's system.
+- Hangs each course as a cover with a small label, like works on a gallery wall: a YouTube thumbnail for a YouTube video or playlist, and a typographic cover (the course title on a deep tone per first topic) for other platforms. Light and dark themes follow the reader's system, with a toggle in the header; the choice is kept only in the reader's own browser (local storage, no cookie).
 - Checks every link once a week and fails only when a page is gone.
 
 ## What it never does
@@ -59,7 +59,7 @@ spoken: en # language of the course: en or it
 free: true
 note:
   en: One or two sentences of your own on why it helped.
-  it: Una o due frasi tue sul perchÃ© Ã¨ stato utile.
+  it: Una o due frasi tue sul perchÃƒÂ© ÃƒÂ¨ stato utile.
 added: 2026-11-13
 draft: false
 # thumbnailVideoId: dQw4w9WgXcQ  # optional, YouTube playlists only: the video whose thumbnail to show
