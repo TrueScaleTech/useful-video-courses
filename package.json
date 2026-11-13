@@ -1,0 +1,32 @@
+{
+  "name": "useful-video-courses",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "A hand-picked list of video courses on information security, with short personal notes.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test \"tools/*.test.mjs\"",
+    "links": "node tools/check-links.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.11"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^22.20.5",
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2",
+    "typescript": "^5.9.0",
+    "yaml": "^2.9.1"
+  }
+}
