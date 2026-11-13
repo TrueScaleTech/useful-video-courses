@@ -1,0 +1,15 @@
+# Placeholder entry. It is a draft, so it never appears on the built site.
+title: Example advanced course (replace me)
+author: Example Platform
+platform: udemy
+url: https://example.com/course-two
+level: advanced
+topics: [firewalls, automation]
+hours: 9.5
+spoken: it
+free: false
+note:
+  en: A second placeholder, to check filters and layout.
+  it: Un secondo segnaposto, per provare filtri e impaginazione.
+added: 2026-11-13
+draft: true
