@@ -118,7 +118,7 @@ export const STRINGS: Record<Locale, Strings> = {
     countMany: '{n} corsi',
     empty: 'Nessun corso corrisponde ai filtri.',
     visit: 'Apri il corso',
-    hours: (h) => `${h} h`,
+    hours: (h) => `${String(h).replace('.', ',')} h`,
     free: 'Gratuito',
     paid: 'A pagamento',
     addedOn: 'Aggiunto',
