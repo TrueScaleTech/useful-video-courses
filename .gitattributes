@@ -1,0 +1,2 @@
+# Keep line endings as LF everywhere, including on Windows runners, so Prettier's check passes.
+* text=auto eol=lf
