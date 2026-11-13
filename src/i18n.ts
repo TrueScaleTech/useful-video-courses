@@ -17,7 +17,7 @@ interface Strings {
   intro: string;
   navCourses: string;
   navAbout: string;
-  languageLabel: string;
+  switchLanguage: string;
   toDarkTheme: string;
   toLightTheme: string;
   filterTopic: string;
@@ -50,7 +50,7 @@ export const STRINGS: Record<Locale, Strings> = {
       'A short, hand-picked list of video courses on security, networks and automation. Each one has a note from me on why it helped. Every link goes to the original page.',
     navCourses: 'Courses',
     navAbout: 'About',
-    languageLabel: 'Language',
+    switchLanguage: 'Switch to Italian',
     toDarkTheme: 'Switch to the dark theme',
     toLightTheme: 'Switch to the light theme',
     filterTopic: 'Topic',
@@ -109,7 +109,7 @@ export const STRINGS: Record<Locale, Strings> = {
       'Un elenco breve e scelto a mano di videocorsi su sicurezza, reti e automazione. Per ognuno trovi una mia nota sul perché mi è servito. Ogni link porta alla pagina originale.',
     navCourses: 'Corsi',
     navAbout: 'Informazioni',
-    languageLabel: 'Lingua',
+    switchLanguage: 'Passa all’inglese',
     toDarkTheme: 'Passa al tema scuro',
     toLightTheme: 'Passa al tema chiaro',
     filterTopic: 'Argomento',

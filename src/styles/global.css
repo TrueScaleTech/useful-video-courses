@@ -130,27 +130,24 @@ header.site .wrap {
   gap: 14px;
   font-size: 0.9rem;
 }
-/* IT | EN: the current language is plain ink, the other one is a link. */
+/* IT | EN is a single link: the whole mark, with some padding, is the click target.
+   The current language is ink and bold, the other one is quiet. */
 .lang {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.lang a {
+  padding: 8px 10px;
   color: var(--quiet);
-  text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.04em;
+  text-decoration: none;
 }
-.lang a:hover {
-  color: var(--ink);
-  text-decoration: underline;
-}
-.lang a[aria-current='true'] {
+.lang .code[data-current='true'] {
   color: var(--ink);
   font-weight: 800;
-  text-decoration: none;
-  pointer-events: none;
+}
+.lang:hover .code {
+  color: var(--ink);
 }
 .lang .sep {
   color: var(--rule);

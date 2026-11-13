@@ -52,7 +52,14 @@ const pageDescription = description ?? t.tagline;
     <header class="site">
       <div class="wrap">
         <div class="tools">
-          <div class="lang" role="group" aria-label={t.languageLabel}>
+          <!-- One link for the whole IT | EN mark: a click anywhere on it switches to the other language. -->
+          <a
+            class="lang"
+            href={`${base}/${other}/${path}`}
+            lang={other}
+            hreflang={other}
+            aria-label={t.switchLanguage}
+          >
             {SWITCH_ORDER.map((code, i) => (
               <>
                 {i > 0 && (
@@ -60,17 +67,16 @@ const pageDescription = description ?? t.tagline;
                     |
                   </span>
                 )}
-                <a
-                  href={`${base}/${code}/${path}`}
-                  lang={code}
-                  hreflang={code}
-                  aria-current={code === locale ? 'true' : undefined}
+                <span
+                  class="code"
+                  aria-hidden="true"
+                  data-current={code === locale ? 'true' : undefined}
                 >
                   {code.toUpperCase()}
-                </a>
+                </span>
               </>
             ))}
-          </div>
+          </a>
           <button
             type="button"
             class="theme"
