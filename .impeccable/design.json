@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T00:00:00Z",
+  "title": "Design System: Useful Video Courses",
+  "extensions": {
+    "colorMeta": {
+      "wall": {
+        "role": "neutral",
+        "displayName": "Gallery Wall",
+        "canonical": "#f4f4f2",
+        "tonalRamp": [
+          "#151514",
+          "#2a2a28",
+          "#464643",
+          "#6b6b66",
+          "#9a9a94",
+          "#c4c4be",
+          "#e2e2de",
+          "#f4f4f2"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Gallery Ink",
+        "canonical": "#141414",
+        "tonalRamp": [
+          "#141414",
+          "#2a2a2a",
+          "#444444",
+          "#656565",
+          "#8c8c8c",
+          "#b4b4b4",
+          "#d6d6d6",
+          "#ececec"
+        ]
+      },
+      "quiet": {
+        "role": "neutral",
+        "displayName": "Quiet Caption",
+        "canonical": "#595954",
+        "tonalRamp": [
+          "#1f1f1d",
+          "#33332f",
+          "#46463f",
+          "#595954",
+          "#76766f",
+          "#979791",
+          "#b9b9b3",
+          "#dcdcd7"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#d9d9d4",
+        "tonalRamp": [
+          "#34342f",
+          "#55554f",
+          "#77776f",
+          "#9a9a92",
+          "#b8b8b1",
+          "#d9d9d4",
+          "#e8e8e4",
+          "#f4f4f2"
+        ]
+      },
+      "mark": {
+        "role": "primary",
+        "displayName": "Vermilion Mark",
+        "canonical": "#c8321e",
+        "tonalRamp": [
+          "#3a0f08",
+          "#5e170c",
+          "#8a2111",
+          "#c8321e",
+          "#dd5a46",
+          "#ee6a52",
+          "#f5a598",
+          "#fbd8d2"
+        ]
+      },
+      "wall-night": {
+        "role": "neutral",
+        "displayName": "Gallery At Night Wall",
+        "canonical": "#151514",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#151514",
+          "#222220",
+          "#34342f",
+          "#55554f",
+          "#77776f",
+          "#a3a39c",
+          "#ecece8"
+        ]
+      },
+      "ink-night": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#ecece8",
+        "tonalRamp": [
+          "#34342f",
+          "#55554f",
+          "#77776f",
+          "#a3a39c",
+          "#c4c4be",
+          "#d8d8d3",
+          "#ecece8",
+          "#f8f8f6"
+        ]
+      },
+      "quiet-night": {
+        "role": "neutral",
+        "displayName": "Night Caption",
+        "canonical": "#a3a39c",
+        "tonalRamp": [
+          "#34342f",
+          "#55554f",
+          "#77776f",
+          "#8c8c85",
+          "#a3a39c",
+          "#bcbcb6",
+          "#d4d4cf",
+          "#ecece8"
+        ]
+      },
+      "rule-night": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "#34342f",
+        "tonalRamp": [
+          "#151514",
+          "#1f1f1d",
+          "#2a2a27",
+          "#34342f",
+          "#46463f",
+          "#5e5e57",
+          "#77776f",
+          "#9a9a92"
+        ]
+      },
+      "mark-night": {
+        "role": "primary",
+        "displayName": "Night Vermilion",
+        "canonical": "#ee6a52",
+        "tonalRamp": [
+          "#5e170c",
+          "#8a2111",
+          "#c8321e",
+          "#dd5a46",
+          "#ee6a52",
+          "#f38b79",
+          "#f7b3a6",
+          "#fbd8d2"
+        ]
+      },
+      "tone-fundamentals": {
+        "role": "tertiary",
+        "displayName": "Slate Teal",
+        "canonical": "#2f4858",
+        "tonalRamp": [
+          "#0f171d",
+          "#1a2a34",
+          "#2f4858",
+          "#476a80",
+          "#6a8ea4",
+          "#93b0c0",
+          "#bdd0da",
+          "#e2ebf0"
+        ]
+      },
+      "tone-networking": {
+        "role": "tertiary",
+        "displayName": "Deep Sea",
+        "canonical": "#1f4e5f",
+        "tonalRamp": [
+          "#0a1a20",
+          "#133440",
+          "#1f4e5f",
+          "#34748a",
+          "#5896ab",
+          "#88b6c6",
+          "#b8d3dd",
+          "#e0edf1"
+        ]
+      },
+      "tone-firewalls": {
+        "role": "tertiary",
+        "displayName": "Brick",
+        "canonical": "#7a2e1f",
+        "tonalRamp": [
+          "#2a0f0a",
+          "#4d1c12",
+          "#7a2e1f",
+          "#a04633",
+          "#bd6d5c",
+          "#d39a8d",
+          "#e6c5bd",
+          "#f4e5e1"
+        ]
+      },
+      "tone-appsec": {
+        "role": "tertiary",
+        "displayName": "Aubergine",
+        "canonical": "#4a3a6b",
+        "tonalRamp": [
+          "#17122a",
+          "#2d2347",
+          "#4a3a6b",
+          "#6a5890",
+          "#8c7cb0",
+          "#b0a5cc",
+          "#d3cce4",
+          "#ece9f3"
+        ]
+      },
+      "tone-pentest": {
+        "role": "tertiary",
+        "displayName": "Oxblood",
+        "canonical": "#5a1f2e",
+        "tonalRamp": [
+          "#1e0a10",
+          "#3a1420",
+          "#5a1f2e",
+          "#80384a",
+          "#a35e6e",
+          "#c28e9a",
+          "#dcbdc4",
+          "#f1e3e6"
+        ]
+      },
+      "tone-cloud": {
+        "role": "tertiary",
+        "displayName": "Harbour Blue",
+        "canonical": "#1d4f7a",
+        "tonalRamp": [
+          "#09192a",
+          "#123452",
+          "#1d4f7a",
+          "#3475a8",
+          "#5f98c4",
+          "#8fb8d8",
+          "#bdd5e8",
+          "#e2eef6"
+        ]
+      },
+      "tone-blue-team": {
+        "role": "tertiary",
+        "displayName": "Pine",
+        "canonical": "#1f5a43",
+        "tonalRamp": [
+          "#0a1e16",
+          "#133a2b",
+          "#1f5a43",
+          "#348164",
+          "#5ca388",
+          "#8cc0aa",
+          "#bcdace",
+          "#e2f0e9"
+        ]
+      },
+      "tone-grc": {
+        "role": "tertiary",
+        "displayName": "Bronze",
+        "canonical": "#5a4a1f",
+        "tonalRamp": [
+          "#1e1809",
+          "#3a2f12",
+          "#5a4a1f",
+          "#836f36",
+          "#a8955c",
+          "#c6b88c",
+          "#ded4b8",
+          "#f1ecde"
+        ]
+      },
+      "tone-automation": {
+        "role": "tertiary",
+        "displayName": "Moss",
+        "canonical": "#3d5a22",
+        "tonalRamp": [
+          "#141f0b",
+          "#273916",
+          "#3d5a22",
+          "#5a8034",
+          "#7ea25b",
+          "#a3c08a",
+          "#c8dab8",
+          "#e7f0df"
+        ]
+      },
+      "tone-ai-security": {
+        "role": "tertiary",
+        "displayName": "Plum",
+        "canonical": "#6a2f5a",
+        "tonalRamp": [
+          "#240f1e",
+          "#431d3a",
+          "#6a2f5a",
+          "#8f4b7c",
+          "#ae72a0",
+          "#c99dbf",
+          "#e0c6da",
+          "#f3e7f0"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page h1 on list and About; very heavy and tightly tracked."
+      },
+      "plate": {
+        "displayName": "Plate",
+        "purpose": "Course title set large on a typographic cover."
+      },
+      "title": { "displayName": "Label title", "purpose": "Course title in the object label." },
+      "headline": { "displayName": "Headline", "purpose": "About page section headings." },
+      "wall-text": { "displayName": "Wall text", "purpose": "Exhibition-style intro paragraph." },
+      "body": { "displayName": "Body", "purpose": "The owner's note and About prose." },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Caption data: author, facts, topics, filters, count."
+      },
+      "link": { "displayName": "Open link", "purpose": "Underlined caption link to the course." }
+    },
+    "shadows": [
+      {
+        "name": "hang",
+        "value": "0 1px 2px rgb(0 0 0 / 0.14), 0 16px 28px -14px rgb(0 0 0 / 0.34)",
+        "purpose": "Resting cover, a contact edge plus soft drop (dark: 0.5 / 0.8 alphas)."
+      },
+      {
+        "name": "hang-lift",
+        "value": "0 2px 4px rgb(0 0 0 / 0.16), 0 24px 36px -14px rgb(0 0 0 / 0.4)",
+        "purpose": "Hovered or focus-within cover (dark: 0.55 / 0.9 alphas)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-hang",
+        "value": "0.45s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Cover lift (translateY -4px) and shadow change; disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "two-column", "value": "62rem" },
+      { "name": "one-column", "value": "40rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Typographic Cover",
+      "kind": "custom",
+      "refersTo": "cover",
+      "description": "16:9 plate hung with a soft shadow; non-YouTube courses show the title on their first topic's tone.",
+      "html": "<div class=\"ds-cover\"><span class=\"ds-plate\">Firewalls from first principles</span></div>",
+      "css": ".ds-cover { aspect-ratio: 16 / 9; width: 320px; background: #7a2e1f; box-shadow: 0 1px 2px rgb(0 0 0 / 0.14), 0 16px 28px -14px rgb(0 0 0 / 0.34); display: grid; place-items: center; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1); } .ds-cover:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgb(0 0 0 / 0.16), 0 24px 36px -14px rgb(0 0 0 / 0.4); } .ds-plate { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 18px; font-family: 'Hanken Grotesk Variable', system-ui, sans-serif; font-size: 1.7rem; font-weight: 800; line-height: 1.02; letter-spacing: -0.035em; color: #fff; text-wrap: balance; }"
+    },
+    {
+      "name": "Object Label",
+      "kind": "card",
+      "refersTo": "label-title",
+      "description": "Caption grid under a cover: title, level, author, facts, then the owner's note.",
+      "html": "<div class=\"ds-label\"><h3>Firewalls from first principles</h3><p class=\"ds-level\">Intermediate</p><p class=\"ds-who\">A. Author, YouTube</p><p class=\"ds-facts\"><span class=\"ds-mark\"></span>4 h · Free</p><p class=\"ds-note\">Clear on rule ordering; the lab is the best part.</p></div>",
+      "css": ".ds-label { width: 320px; margin-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 20px; font-family: 'Hanken Grotesk Variable', system-ui, sans-serif; font-size: 0.875rem; color: #595954; } .ds-label h3 { grid-column: 1; margin: 0; font-size: 1.1875rem; line-height: 1.25; font-weight: 800; letter-spacing: -0.015em; color: #141414; } .ds-level { grid-column: 2; grid-row: 1; margin: 0; text-align: right; color: #141414; font-weight: 600; } .ds-who { grid-column: 1; margin: 0; } .ds-facts { grid-column: 2; grid-row: 2; margin: 0; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; } .ds-mark { display: inline-block; width: 0.5em; height: 0.5em; margin-right: 0.45em; border-radius: 50%; background: #c8321e; vertical-align: 0.05em; } .ds-note { grid-column: 1 / -1; margin: 12px 0 0; font-size: 1rem; line-height: 1.5; color: #141414; }"
+    },
+    {
+      "name": "Open Link",
+      "kind": "custom",
+      "refersTo": "open-link",
+      "description": "The only action: an underlined caption line with an arrow; hover recolours the underline to the mark.",
+      "html": "<a class=\"ds-open\" href=\"#\">Open the course <svg viewBox=\"0 0 14 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M4 10 10 4M5 4h5v5\"></path></svg></a>",
+      "css": ".ds-open { display: inline-flex; align-items: center; gap: 8px; font-family: 'Hanken Grotesk Variable', system-ui, sans-serif; color: #141414; font-size: 0.95rem; font-weight: 700; text-decoration-line: underline; text-decoration-thickness: 2px; text-underline-offset: 0.22em; } .ds-open:hover, .ds-open:focus-visible { text-decoration-color: #c8321e; } .ds-open:focus-visible { outline: 2px solid #c8321e; outline-offset: 3px; } .ds-open svg { width: 14px; height: 14px; flex: none; }"
+    },
+    {
+      "name": "Filter Line",
+      "kind": "input",
+      "refersTo": "filters-select",
+      "description": "Caption-type row: underline-only selects, a free-only checkbox with the mark, a count.",
+      "html": "<form class=\"ds-filters\"><label>Topic<select><option>All</option></select></label><label class=\"ds-check\"><input type=\"checkbox\"><span class=\"ds-dot\"></span>Free only</label><p class=\"ds-count\">12 courses</p></form>",
+      "css": ".ds-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 14px 28px; padding: 14px 0; border-top: 1px solid #141414; border-bottom: 1px solid #d9d9d4; font-family: 'Hanken Grotesk Variable', system-ui, sans-serif; font-size: 0.875rem; } .ds-filters label { display: grid; gap: 2px; color: #595954; } .ds-filters select { font: inherit; font-size: 0.95rem; color: #141414; background: transparent; border: 0; border-bottom: 1px solid #141414; border-radius: 0; padding: 4px 22px 4px 0; min-width: 10.5rem; } .ds-filters select:focus-visible, .ds-filters input:focus-visible { outline: 2px solid #c8321e; outline-offset: 3px; } .ds-check { display: flex !important; align-items: center; gap: 8px; padding-bottom: 6px; color: #141414 !important; } .ds-check input { width: 16px; height: 16px; accent-color: #c8321e; } .ds-dot { display: inline-block; width: 0.5em; height: 0.5em; border-radius: 50%; background: #c8321e; } .ds-count { margin: 0 0 6px auto; color: #595954; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "refersTo": "label-meta",
+      "description": "Brand left, quiet caption links right; hover and current page go to ink with an underline.",
+      "html": "<header class=\"ds-site\"><a class=\"ds-brand\" href=\"#\">Useful Video Courses</a><nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Courses</a><a href=\"#\">About</a><a href=\"#\">English</a></nav></header>",
+      "css": ".ds-site { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 28px; padding: 22px 0 14px; border-bottom: 1px solid #d9d9d4; font-family: 'Hanken Grotesk Variable', system-ui, sans-serif; } .ds-brand { font-size: 0.9rem; font-weight: 700; letter-spacing: 0.01em; color: #141414; text-decoration: none; } .ds-nav { display: flex; gap: 24px; font-size: 0.9rem; } .ds-nav a { color: #595954; text-decoration: none; } .ds-nav a:hover, .ds-nav a[aria-current='page'] { color: #141414; text-decoration: underline; text-underline-offset: 0.22em; text-decoration-thickness: 1px; } .ds-nav a:focus-visible { outline: 2px solid #c8321e; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Parete di museo (the gallery wall)",
+    "overview": "The list is an exhibition one person curated. Covers hang on an off-white wall, each with a small object label beneath it: title, author, level, hours and price, then the owner's note. The page reads as wall text plus labels, not as a catalogue of cards. Type is a single grotesque (Hanken Grotesk Variable) pushed to heavy weight and tight tracking for display, and kept small and quiet for captions. The dark theme is the same room at night.\n\nDensity is airy at the top (a large two-line title beside an intro paragraph) and measured below (a three-column wall, two at tablet, one at phone). Depth is a soft contact shadow under each cover, as if hung, and nothing else. There is exactly one accent, a vermilion mark, used sparingly.\n\nThe build's stylesheet is the source of truth; where it differs from the original contract, the build wins and the differences are noted below.",
+    "keyCharacteristics": [
+      "Warm-neutral wall, near-black ink, one vermilion mark; hairline rules, no fills.",
+      "Heavy grotesque display at very tight tracking; small quiet captions.",
+      "Square covers (16:9, no radius) with a soft hung shadow that lifts 4px on hover or focus.",
+      "Courses without a YouTube thumbnail get a typographic plate: the title set large on a deep tone chosen by the first topic.",
+      "No chips, no filled buttons: the action is an underlined caption link with a small arrow.",
+      "Self-hosted face only; nothing loads from another origin except YouTube thumbnails."
+    ],
+    "rules": [
+      {
+        "name": "The One Mark Rule",
+        "body": "Vermilion is a dot, a ring, a selection and a hover underline. It is never a surface, a button or a text colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tone Stays In The Cover Rule",
+        "body": "Topic tones colour a cover plate and nothing else; they never reach chrome, links or text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Is The Hierarchy Rule",
+        "body": "Emphasis comes from weight 800 against 400 and from size, never from colour or uppercase tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hung Object Rule",
+        "body": "Only covers cast a shadow, and it is soft and offset downward. Text, labels, links and form controls are flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the wall and ink as the only large surfaces, and let one vermilion dot, ring or underline carry all emphasis.",
+      "Do set course titles in weight 800 with negative tracking (-0.015em to -0.04em) and keep captions at 0.875rem in quiet.",
+      "Do give covers a 16:9 box, no radius, and the Hang shadow; give typographic plates the first topic's tone.",
+      "Do keep the link a plain underlined caption line.",
+      "Do keep every asset self-hosted; the only third-party load is YouTube thumbnails with no referrer.",
+      "Do honour reduced motion and keep visible 2px focus rings in the mark colour."
+    ],
+    "donts": [
+      "Don't introduce pill chips, filled or coloured buttons, or card borders; the shadow and the label are the whole card.",
+      "Don't use vermilion as a fill, button, heading colour or large area.",
+      "Don't reuse a topic tone outside a cover plate.",
+      "Don't add a second typeface or load a face from another origin.",
+      "Don't add shadows to text, labels or form controls."
+    ]
+  }
+}
