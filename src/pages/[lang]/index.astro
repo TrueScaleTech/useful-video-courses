@@ -21,13 +21,13 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
 ---
 
 <Base locale={locale} page="courses">
-  <section class="hero">
-    <h1>{t.tagline}</h1>
-    <p>{t.intro}</p>
+  <section class="opening">
+    <h1>{t.siteTitle}</h1>
+    <p class="wall-text">{t.intro}</p>
   </section>
 
   {courses.length > 0 && (
-    <form class="filters" id="filters" aria-label={t.navCourses}>
+    <form class="filters" id="filters" aria-label={t.navCourses} hidden>
       <label>
         {t.filterTopic}
         <select name="topic">
@@ -48,6 +48,7 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
       </label>
       <label class="check">
         <input type="checkbox" name="free" />
+        <span class="mark" aria-hidden="true"></span>
         {t.filterFreeOnly}
       </label>
       <p class="count" id="count" aria-live="polite">
@@ -56,7 +57,7 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
     </form>
   )}
 
-  <ul class="grid" id="grid">
+  <ul class="wall" id="grid">
     {courses.map((course) => (
       <CourseCard course={course} locale={locale} />
     ))}
@@ -71,7 +72,9 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
     (function () {
       var form = document.getElementById('filters');
       if (!form) return;
-      var cards = Array.prototype.slice.call(document.querySelectorAll('#grid .card'));
+      // The filters only exist for readers whose browser runs this script.
+      form.hidden = false;
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#grid .work'));
       var count = document.getElementById('count');
       var empty = document.getElementById('empty');
       function label(n) {

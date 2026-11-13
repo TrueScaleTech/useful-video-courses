@@ -11,68 +11,71 @@ interface Props {
 const { course, locale } = Astro.props;
 const t = STRINGS[locale];
 const d = course.data;
-// Only YouTube gives a stable thumbnail address; other platforms get a drawn placeholder.
+// Only YouTube gives a stable thumbnail address; other platforms get a drawn plate.
 const thumb = d.platform === 'youtube' ? courseThumbnail(d.url, d.thumbnailVideoId) : null;
 const added = d.added.toLocaleDateString(locale, { year: 'numeric', month: 'short' });
+const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new tab';
 ---
 
 <li
-  class="card"
+  class="work"
   data-level={d.level}
   data-topics={d.topics.join(' ')}
   data-free={d.free ? 'true' : 'false'}
 >
-  <div class="thumb" data-platform={d.platform}>
-    {thumb ? (
-      <img
-        src={thumb}
-        alt=""
-        width="320"
-        height="180"
-        loading="lazy"
-        decoding="async"
-        referrerpolicy="no-referrer"
-      />
-    ) : (
-      <span class="thumb-label">{t.platforms[d.platform]}</span>
-    )}
-  </div>
-  <ul class="chips" aria-label={t.filterTopic}>
-    {d.topics.map((topic) => (
-      <li class="chip">{t.topics[topic]}</li>
-    ))}
-  </ul>
-  <h2>{d.title}</h2>
-  <p class="by">
-    {d.author} · {t.platforms[d.platform]}
-  </p>
-  <p class="note">{d.note[locale]}</p>
-  <p class="meta">
-    <span class="chip strong">{t.levels[d.level]}</span>
-    <span>{d.free ? t.free : t.paid}</span>
-    {d.hours !== undefined && <span>{t.hours(d.hours)}</span>}
-    <span>
-      {t.courseIn}: {t.languages[d.spoken]}
-    </span>
-    <span>
-      {t.addedOn} {added}
-    </span>
-  </p>
-  <a class="button" href={d.url} rel="noopener noreferrer" target="_blank">
-    {t.visit}
-    <span class="sr-only">
-      ({locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new tab'})
-    </span>
+  <!-- The cover is a second route to the same link; keyboard and screen-reader users get the caption link. -->
+  <a
+    class="cover-link"
+    href={d.url}
+    rel="noopener noreferrer"
+    target="_blank"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="cover" data-topic={d.topics[0]}>
+      {thumb ? (
+        <img
+          src={thumb}
+          alt=""
+          width="480"
+          height="360"
+          loading="lazy"
+          decoding="async"
+          referrerpolicy="no-referrer"
+        />
+      ) : (
+        <span class="plate">{d.title}</span>
+      )}
+    </div>
   </a>
+  <div class="label">
+    <h2>{d.title}</h2>
+    <p class="level">{t.levels[d.level]}</p>
+    <p class="who">
+      {d.author}, {t.platforms[d.platform]}
+    </p>
+    <p class="facts">
+      {d.free && <span class="mark" aria-hidden="true" />}
+      {d.hours !== undefined && `${t.hours(d.hours)} · `}
+      {d.free ? t.free : t.paid}
+    </p>
+    <p class="note">{d.note[locale]}</p>
+    <a class="open" href={d.url} rel="noopener noreferrer" target="_blank">
+      {t.visit}
+      <svg
+        viewBox="0 0 14 14"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        aria-hidden="true"
+      >
+        <path d="M4 10 10 4M5 4h5v5"></path>
+      </svg>
+      <span class="sr-only">({newTab})</span>
+    </a>
+    <p class="topics">{d.topics.map((topic) => t.topics[topic]).join(' · ')}</p>
+    <p class="small">
+      {t.courseIn}: {t.languages[d.spoken]} · {t.addedOn} {added}
+    </p>
+  </div>
 </li>
-
-<style is:global>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-</style>

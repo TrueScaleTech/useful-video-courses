@@ -13,14 +13,14 @@ Course data is a handful of small YAML files, so adding a course means adding on
 
 - Lists courses with title, author, platform, level, topics, duration, price (free or paid) and a note in English and Italian.
 - Filters by topic, level and "free only", with plain JavaScript that is optional: without it, every course stays visible.
-- Shows a YouTube thumbnail when the course is a YouTube video or playlist; other platforms get a drawn placeholder.
+- Hangs each course as a cover with a small label, like works on a gallery wall: a YouTube thumbnail for a YouTube video or playlist, and a typographic cover (the course title on a deep tone per first topic) for other platforms. Light and dark themes follow the reader's system.
 - Checks every link once a week and fails only when a page is gone.
 
 ## What it never does
 
 - It does not host, copy or embed videos, transcripts or course material.
 - It does not store thumbnails: the image is loaded by the visitor's browser straight from YouTube's image host, without sending a referrer.
-- No cookies, no analytics, no third-party fonts or scripts. A Content-Security-Policy in every page allows images from `i.ytimg.com` and nothing else.
+- No cookies, no analytics, no third-party scripts. The one typeface (Hanken Grotesk) is self-hosted. A Content-Security-Policy in every page allows images from `i.ytimg.com` and nothing else.
 
 ## Quick start
 
@@ -59,7 +59,7 @@ spoken: en # language of the course: en or it
 free: true
 note:
   en: One or two sentences of your own on why it helped.
-  it: Una o due frasi tue sul perché è stato utile.
+  it: Una o due frasi tue sul perchÃ© Ã¨ stato utile.
 added: 2026-11-13
 draft: false
 # thumbnailVideoId: dQw4w9WgXcQ  # optional, YouTube playlists only: the video whose thumbnail to show
