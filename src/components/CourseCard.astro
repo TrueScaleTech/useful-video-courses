@@ -1,0 +1,78 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { STRINGS, type Locale } from '../i18n';
+import { courseThumbnail } from '../lib/youtube';
+
+interface Props {
+  course: CollectionEntry<'courses'>;
+  locale: Locale;
+}
+
+const { course, locale } = Astro.props;
+const t = STRINGS[locale];
+const d = course.data;
+// Only YouTube gives a stable thumbnail address; other platforms get a drawn placeholder.
+const thumb = d.platform === 'youtube' ? courseThumbnail(d.url, d.thumbnailVideoId) : null;
+const added = d.added.toLocaleDateString(locale, { year: 'numeric', month: 'short' });
+---
+
+<li
+  class="card"
+  data-level={d.level}
+  data-topics={d.topics.join(' ')}
+  data-free={d.free ? 'true' : 'false'}
+>
+  <div class="thumb" data-platform={d.platform}>
+    {thumb ? (
+      <img
+        src={thumb}
+        alt=""
+        width="320"
+        height="180"
+        loading="lazy"
+        decoding="async"
+        referrerpolicy="no-referrer"
+      />
+    ) : (
+      <span class="thumb-label">{t.platforms[d.platform]}</span>
+    )}
+  </div>
+  <ul class="chips" aria-label={t.filterTopic}>
+    {d.topics.map((topic) => (
+      <li class="chip">{t.topics[topic]}</li>
+    ))}
+  </ul>
+  <h2>{d.title}</h2>
+  <p class="by">
+    {d.author} · {t.platforms[d.platform]}
+  </p>
+  <p class="note">{d.note[locale]}</p>
+  <p class="meta">
+    <span class="chip strong">{t.levels[d.level]}</span>
+    <span>{d.free ? t.free : t.paid}</span>
+    {d.hours !== undefined && <span>{t.hours(d.hours)}</span>}
+    <span>
+      {t.courseIn}: {t.languages[d.spoken]}
+    </span>
+    <span>
+      {t.addedOn} {added}
+    </span>
+  </p>
+  <a class="button" href={d.url} rel="noopener noreferrer" target="_blank">
+    {t.visit}
+    <span class="sr-only">
+      ({locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new tab'})
+    </span>
+  </a>
+</li>
+
+<style is:global>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>

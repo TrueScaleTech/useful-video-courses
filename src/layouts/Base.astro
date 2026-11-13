@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import { STRINGS, otherLocale, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  page: 'courses' | 'about';
+  title?: string;
+  description?: string;
+}
+
+const { locale, page, title, description } = Astro.props;
+const t = STRINGS[locale];
+const other = otherLocale(locale);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = page === 'about' ? 'about/' : '';
+const pageTitle = title ? `${title} · ${t.siteTitle}` : t.siteTitle;
+const pageDescription = description ?? t.tagline;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <!-- Only YouTube's image host may be contacted by the page; no frames, no other origins. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' https://i.ytimg.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'"
+    />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link rel="alternate" hreflang={locale} href={`${base}/${locale}/${path}`} />
+    <link rel="alternate" hreflang={other} href={`${base}/${other}/${path}`} />
+  </head>
+  <body>
+    <a class="skip" href="#content">
+      {locale === 'it' ? 'Vai al contenuto' : 'Skip to content'}
+    </a>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href={`${base}/${locale}/`}>
+          {t.siteTitle}
+        </a>
+        <nav class="site" aria-label={locale === 'it' ? 'Principale' : 'Main'}>
+          <a href={`${base}/${locale}/`} aria-current={page === 'courses' ? 'page' : undefined}>
+            {t.navCourses}
+          </a>
+          <a href={`${base}/${locale}/about/`} aria-current={page === 'about' ? 'page' : undefined}>
+            {t.navAbout}
+          </a>
+          <a href={`${base}/${other}/${path}`} lang={other} hreflang={other}>
+            {t.switchTo}
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="content">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <span>{t.footer}</span>
+        <a href="https://github.com/TrueScaleTech/useful-video-courses" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

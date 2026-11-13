@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import { LOCALES, STRINGS, type Locale } from '../../i18n';
+import { LEVELS, TOPICS } from '../../content.config';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang as Locale;
+const t = STRINGS[locale];
+
+// Drafts stay hidden, unless SHOW_DRAFTS=1 is set to preview the layout.
+const showDrafts = process.env.SHOW_DRAFTS === '1';
+const courses = (await getCollection('courses', ({ data }) => showDrafts || !data.draft)).sort(
+  (a, b) => b.data.added.getTime() - a.data.added.getTime(),
+);
+const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.includes(topic)));
+---
+
+<Base locale={locale} page="courses">
+  <section class="hero">
+    <h1>{t.tagline}</h1>
+    <p>{t.intro}</p>
+  </section>
+
+  {courses.length > 0 && (
+    <form class="filters" id="filters" aria-label={t.navCourses}>
+      <label>
+        {t.filterTopic}
+        <select name="topic">
+          <option value="">{t.all}</option>
+          {usedTopics.map((topic) => (
+            <option value={topic}>{t.topics[topic]}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        {t.filterLevel}
+        <select name="level">
+          <option value="">{t.all}</option>
+          {LEVELS.map((level) => (
+            <option value={level}>{t.levels[level]}</option>
+          ))}
+        </select>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="free" />
+        {t.filterFreeOnly}
+      </label>
+      <p class="count" id="count" aria-live="polite">
+        {courses.length === 1 ? t.countOne : t.countMany.replace('{n}', String(courses.length))}
+      </p>
+    </form>
+  )}
+
+  <ul class="grid" id="grid">
+    {courses.map((course) => (
+      <CourseCard course={course} locale={locale} />
+    ))}
+  </ul>
+  <p class="empty" id="empty" hidden>
+    {t.empty}
+  </p>
+  {courses.length === 0 && <p class="empty">{t.empty}</p>}
+
+  <script is:inline define:vars={{ countOne: t.countOne, countMany: t.countMany }}>
+    // Progressive enhancement: without JavaScript every course stays visible.
+    (function () {
+      var form = document.getElementById('filters');
+      if (!form) return;
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#grid .card'));
+      var count = document.getElementById('count');
+      var empty = document.getElementById('empty');
+      function label(n) {
+        return n === 1 ? countOne : countMany.replace('{n}', String(n));
+      }
+
+      function apply() {
+        var topic = form.elements.topic.value;
+        var level = form.elements.level.value;
+        var freeOnly = form.elements.free.checked;
+        var shown = 0;
+        cards.forEach(function (card) {
+          var ok =
+            (!topic || card.dataset.topics.split(' ').indexOf(topic) !== -1) &&
+            (!level || card.dataset.level === level) &&
+            (!freeOnly || card.dataset.free === 'true');
+          card.hidden = !ok;
+          if (ok) shown += 1;
+        });
+        count.textContent = label(shown);
+        empty.hidden = shown !== 0;
+      }
+
+      form.addEventListener('change', apply);
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+      });
+    })();
+  </script>
+</Base>
