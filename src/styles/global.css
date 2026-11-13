@@ -121,19 +121,8 @@ header.site .wrap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px 28px;
-  padding-top: 16px;
-  padding-bottom: 14px;
-  /* The rule stops at the content edge, like the rules in the filter line. */
-  background: linear-gradient(var(--rule), var(--rule)) no-repeat var(--gutter) 100% /
-    calc(100% - 2 * var(--gutter)) 1px;
-}
-.brand {
-  margin-right: auto;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  text-decoration: none;
+  justify-content: flex-end;
+  padding-top: 14px;
 }
 .tools {
   display: flex;
@@ -197,30 +186,6 @@ header.site .wrap {
 }
 .theme[data-state='dark'] .icon-sun {
   display: block;
-}
-/* On a phone the language switch and theme toggle stay top right and the page links drop below. */
-@media (max-width: 40rem) {
-  .tools {
-    order: 2;
-  }
-  nav.site {
-    order: 3;
-    flex-basis: 100%;
-  }
-}
-nav.site {
-  display: flex;
-  gap: 24px;
-  font-size: 0.9rem;
-}
-nav.site a {
-  color: var(--quiet);
-  text-decoration: none;
-}
-nav.site a:hover,
-nav.site a[aria-current='page'] {
-  color: var(--ink);
-  text-decoration: underline;
 }
 
 main {
@@ -536,8 +501,15 @@ footer.site .wrap {
   font-size: 0.85rem;
   color: var(--quiet);
 }
+footer.site .links {
+  display: flex;
+  gap: 24px;
+}
 footer.site a {
   color: var(--quiet);
+}
+footer.site a:hover {
+  color: var(--ink);
 }
 
 @media (prefers-reduced-motion: reduce) {

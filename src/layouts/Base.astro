@@ -51,17 +51,6 @@ const pageDescription = description ?? t.tagline;
     </a>
     <header class="site">
       <div class="wrap">
-        <a class="brand" href={`${base}/${locale}/`}>
-          {t.siteTitle}
-        </a>
-        <nav class="site" aria-label={locale === 'it' ? 'Principale' : 'Main'}>
-          <a href={`${base}/${locale}/`} aria-current={page === 'courses' ? 'page' : undefined}>
-            {t.navCourses}
-          </a>
-          <a href={`${base}/${locale}/about/`} aria-current={page === 'about' ? 'page' : undefined}>
-            {t.navAbout}
-          </a>
-        </nav>
         <div class="tools">
           <div class="lang" role="group" aria-label={t.languageLabel}>
             {SWITCH_ORDER.map((code, i) => (
@@ -126,9 +115,16 @@ const pageDescription = description ?? t.tagline;
     <footer class="site">
       <div class="wrap">
         <span>{t.footer}</span>
-        <a href="https://github.com/TrueScaleTech/useful-video-courses" rel="noopener noreferrer">
-          GitHub
-        </a>
+        <nav class="links" aria-label={locale === 'it' ? 'Collegamenti' : 'Links'}>
+          {page === 'about' ? (
+            <a href={`${base}/${locale}/`}>{t.navCourses}</a>
+          ) : (
+            <a href={`${base}/${locale}/about/`}>{t.navAbout}</a>
+          )}
+          <a href="https://github.com/TrueScaleTech/useful-video-courses" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </nav>
       </div>
     </footer>
     <script is:inline>

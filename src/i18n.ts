@@ -84,10 +84,6 @@ export const STRINGS: Record<Locale, Strings> = {
         heading: 'Independence',
         body: 'This is an independent project. It is not affiliated with, sponsored or endorsed by YouTube, Udemy, Coursera or any author listed. There are no affiliate links.',
       },
-      {
-        heading: 'Broken or wrong link?',
-        body: 'Links are checked automatically every week. If you see a problem, open an issue in the repository.',
-      },
     ],
     footer: 'Independent project. Not affiliated with any platform or author listed.',
     levels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },
@@ -146,10 +142,6 @@ export const STRINGS: Record<Locale, Strings> = {
       {
         heading: 'Indipendenza',
         body: 'Progetto indipendente. Non è affiliato, sponsorizzato né approvato da YouTube, Udemy, Coursera o dagli autori elencati. Non ci sono link di affiliazione.',
-      },
-      {
-        heading: 'Link rotto o sbagliato?',
-        body: 'I link vengono controllati automaticamente ogni settimana. Se trovi un problema, apri una segnalazione nel repository.',
       },
     ],
     footer: 'Progetto indipendente. Non affiliato a nessuna piattaforma o autore elencato.',
