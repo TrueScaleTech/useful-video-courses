@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+﻿import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { courseThumbnail, youtubeThumbnailUrl, youtubeVideoId } from '../src/lib/youtube.ts';
 
@@ -27,16 +27,16 @@ test('rejects malformed ids and look-alike hosts', () => {
 });
 
 test('thumbnail url points at the YouTube image host over https', () => {
-  assert.equal(youtubeThumbnailUrl(ID), `https://i.ytimg.com/vi/${ID}/mqdefault.jpg`);
+  assert.equal(youtubeThumbnailUrl(ID), `https://i.ytimg.com/vi/${ID}/hqdefault.jpg`);
 });
 
 test('an explicit video id wins and is validated', () => {
   const playlist = 'https://www.youtube.com/playlist?list=PL123';
   assert.equal(courseThumbnail(playlist), null);
-  assert.equal(courseThumbnail(playlist, ID), `https://i.ytimg.com/vi/${ID}/mqdefault.jpg`);
+  assert.equal(courseThumbnail(playlist, ID), `https://i.ytimg.com/vi/${ID}/hqdefault.jpg`);
   assert.equal(courseThumbnail(playlist, '../../x'), null);
   assert.equal(
     courseThumbnail(`https://youtu.be/${ID}`),
-    `https://i.ytimg.com/vi/${ID}/mqdefault.jpg`,
+    `https://i.ytimg.com/vi/${ID}/hqdefault.jpg`,
   );
 });

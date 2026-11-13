@@ -25,9 +25,12 @@ export function youtubeVideoId(link: string): string | null {
   return candidate !== null && ID.test(candidate) ? candidate : null;
 }
 
-/** The 16:9 thumbnail image that YouTube serves for a video (320x180, no black bars). */
+/**
+ * The thumbnail YouTube serves for a video (480x360). It is a 4:3 frame with black bars above
+ * and below the 16:9 picture; showing it with `object-fit: cover` in a 16:9 box crops the bars.
+ */
 export function youtubeThumbnailUrl(videoId: string): string {
-  return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
+  return `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 }
 
 /**
