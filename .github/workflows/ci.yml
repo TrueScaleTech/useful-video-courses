@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# The workflow only reads the repository; nothing here needs write access.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: ${{ matrix.os }} / Node ${{ matrix.node-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node-version: ['22', '24']
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Format
+        run: npm run format:check
+
+      - name: Type check and content schema
+        run: npm run check
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # The published pages must not contain placeholder entries, and the only thing a page
+      # may load from another origin is a YouTube thumbnail. Plain links (<a href>) to the
+      # courses are fine: they load nothing until clicked.
+      - name: Built site has no drafts and loads nothing from other origins
+        shell: bash
+        run: |
+          if grep -rq "Example course (replace me)" dist; then
+            echo "A draft placeholder leaked into the build" >&2
+            exit 1
+          fi
+          loaded=$(grep -rhoE '<(script|iframe|img|embed|object|source|video|audio|link)\b[^>]*(src|href)="https?://[^"]+"' dist --include=*.html | grep -v 'i\.ytimg\.com' || true)
+          if [ -n "$loaded" ]; then
+            echo "A page loads a resource from another origin:" >&2
+            echo "$loaded" >&2
+            exit 1
+          fi

@@ -1,0 +1,18 @@
+name: Broken or wrong link
+description: A course link is dead, points to the wrong page, or the course was removed.
+labels: [broken-link]
+body:
+  - type: input
+    id: course
+    attributes:
+      label: Course
+      description: Title as shown on the site.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: For example "the video is private" or "the link goes to a different course".
+    validations:
+      required: true
