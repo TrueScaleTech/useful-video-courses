@@ -87,7 +87,7 @@ The schema is checked at build time, so a typo in a topic or a missing note stop
 
 ## Publishing
 
-The site is published to GitHub Pages at `https://truescaletech.github.io/useful-video-courses/`. Publishing is a manual step: the `Deploy to GitHub Pages` workflow runs only when started by hand from the Actions tab, after enabling Pages with the source set to GitHub Actions.
+The site is live on GitHub Pages at <https://truescaletech.github.io/useful-video-courses/>, with the source set to GitHub Actions. Publishing is a manual step: the `Deploy to GitHub Pages` workflow runs only when started by hand from the Actions tab (or with `gh workflow run pages.yml`), so a push to `main` does not change the live site by itself.
 
 ## Development
 
