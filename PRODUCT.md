@@ -24,7 +24,7 @@ Static site on GitHub Pages, published from the public repository `TrueScaleTech
 
 ## Capabilities and Constraints
 
-- Shows courses with title, author, platform (YouTube, Udemy, Coursera, other), level, topics, duration, free or paid, course language, date added, and a note in English and Italian.
+- Shows courses with title, author, platform (YouTube, Udemy, Coursera, other), level, duration, free or paid, the year it was added, and a note in English and Italian.
 - Filters by type (a single video or a whole channel); filters are optional JavaScript and every course stays visible without it.
 - Every entry is a plain external link to the original page. No embedded player, no copied text or images.
 - YouTube thumbnails and channel banners are the only third-party loads, fetched straight from `i.ytimg.com` and `yt3.googleusercontent.com` without a referrer under a Content-Security-Policy; entries without an image get a typographic cover. Nothing else may be loaded from another origin.

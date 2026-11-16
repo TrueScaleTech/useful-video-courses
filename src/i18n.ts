@@ -1,4 +1,4 @@
-import type { KINDS, LEVELS, PLATFORMS, TOPICS } from './content.config';
+import type { KINDS, LEVELS, PLATFORMS } from './content.config';
 
 export const LOCALES = ['en', 'it'] as const;
 export type Locale = (typeof LOCALES)[number];
@@ -9,7 +9,6 @@ export function isLocale(value: string | undefined): value is Locale {
 
 type Level = (typeof LEVELS)[number];
 type Platform = (typeof PLATFORMS)[number];
-type Topic = (typeof TOPICS)[number];
 type Kind = (typeof KINDS)[number];
 
 interface Strings {
@@ -24,25 +23,23 @@ interface Strings {
   filterKind: string;
   kinds: Record<Kind, string>;
   all: string;
-  countOne: string;
-  countMany: string;
+  channelOne: string;
+  channelMany: string;
+  videoOne: string;
+  videoMany: string;
   empty: string;
   visit: string;
   visitChannel: string;
   visitVideo: string;
-  language: string;
   hours: (h: number) => string;
   free: string;
   paid: string;
-  addedOn: string;
-  courseIn: string;
+  addedIn: string;
   aboutTitle: string;
   aboutSections: { heading: string; body: string }[];
   footer: string;
   levels: Record<Level, string>;
   platforms: Record<Platform, string>;
-  topics: Record<Topic, string>;
-  languages: Record<Locale, string>;
 }
 
 export const STRINGS: Record<Locale, Strings> = {
@@ -59,18 +56,18 @@ export const STRINGS: Record<Locale, Strings> = {
     filterKind: 'Type',
     kinds: { video: 'Video', channel: 'Channel' },
     all: 'All',
-    countOne: '1 course',
-    countMany: '{n} courses',
+    channelOne: '1 channel',
+    channelMany: '{n} channels',
+    videoOne: '1 video',
+    videoMany: '{n} videos',
     empty: 'No course matches these filters.',
     visit: 'Open the course',
     visitChannel: 'Open the channel',
     visitVideo: 'Open the video',
-    language: 'Language',
     hours: (h) => `${h} h`,
     free: 'Free',
     paid: 'Paid',
-    addedOn: 'Added',
-    courseIn: 'Course language',
+    addedIn: 'Added in',
     aboutTitle: 'About this list',
     aboutSections: [
       {
@@ -93,21 +90,6 @@ export const STRINGS: Record<Locale, Strings> = {
     footer: 'Independent project. Not affiliated with any platform or author listed.',
     levels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },
     platforms: { youtube: 'YouTube', udemy: 'Udemy', coursera: 'Coursera', other: 'Other' },
-    topics: {
-      fundamentals: 'Fundamentals',
-      networking: 'Networking',
-      firewalls: 'Firewalls',
-      appsec: 'Application security',
-      pentest: 'Penetration testing',
-      cloud: 'Cloud security',
-      'blue-team': 'Blue team',
-      grc: 'Governance and compliance',
-      automation: 'Automation',
-      'ai-security': 'AI security',
-      ai: 'Artificial intelligence',
-      homelab: 'Homelab',
-    },
-    languages: { en: 'English', it: 'Italian' },
   },
   it: {
     siteTitle: 'Videocorsi utili',
@@ -122,18 +104,18 @@ export const STRINGS: Record<Locale, Strings> = {
     filterKind: 'Tipo',
     kinds: { video: 'Video', channel: 'Canale' },
     all: 'Tutti',
-    countOne: '1 corso',
-    countMany: '{n} corsi',
+    channelOne: '1 canale',
+    channelMany: '{n} canali',
+    videoOne: '1 video',
+    videoMany: '{n} video',
     empty: 'Nessun corso corrisponde ai filtri.',
     visit: 'Apri il corso',
     visitChannel: 'Apri il canale',
     visitVideo: 'Apri il video',
-    language: 'Lingua',
     hours: (h) => `${String(h).replace('.', ',')} h`,
     free: 'Gratuito',
     paid: 'A pagamento',
-    addedOn: 'Aggiunto',
-    courseIn: 'Lingua del corso',
+    addedIn: 'Aggiunto nel',
     aboutTitle: 'Su questo elenco',
     aboutSections: [
       {
@@ -156,21 +138,6 @@ export const STRINGS: Record<Locale, Strings> = {
     footer: 'Progetto indipendente. Non affiliato a nessuna piattaforma o autore elencato.',
     levels: { beginner: 'Base', intermediate: 'Intermedio', advanced: 'Avanzato' },
     platforms: { youtube: 'YouTube', udemy: 'Udemy', coursera: 'Coursera', other: 'Altro' },
-    topics: {
-      fundamentals: 'Fondamenti',
-      networking: 'Reti',
-      firewalls: 'Firewall',
-      appsec: 'Sicurezza applicativa',
-      pentest: 'Penetration test',
-      cloud: 'Sicurezza cloud',
-      'blue-team': 'Blue team',
-      grc: 'Governance e conformità',
-      automation: 'Automazione',
-      'ai-security': 'Sicurezza dell’IA',
-      ai: 'Intelligenza artificiale',
-      homelab: 'Homelab',
-    },
-    languages: { en: 'Inglese', it: 'Italiano' },
   },
 };
 

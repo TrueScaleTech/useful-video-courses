@@ -56,7 +56,6 @@ url: https://www.youtube.com/watch?v=...
 level: beginner # beginner, intermediate or advanced
 topics: [firewalls, automation] # see src/content.config.ts
 hours: 6.5 # optional
-spoken: en # language of the course: en or it
 free: true
 note:
   en: One or two sentences of your own on why it helped.

@@ -58,7 +58,6 @@ const courses = defineCollection({
     level: z.enum(LEVELS),
     topics: z.array(z.enum(TOPICS)).min(1),
     hours: z.number().positive().optional(),
-    spoken: z.enum(['en', 'it']),
     free: z.boolean(),
     // Personal notes, written by hand in both languages. Never copied from the course.
     note: z.object({

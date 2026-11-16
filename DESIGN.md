@@ -207,7 +207,7 @@ A 16:9 plate hung with the Hang shadow. YouTube entries show a cover image (obje
 
 ### Object label
 
-Grid under the cover, 18px below it. Title (800) top-left, level (600, ink) top-right, author and platform in quiet caption, hours and price right-aligned with tabular figures, then the note in ink at 1rem, then the link, then topics and the small print (language, date added) in quiet caption.
+Grid under the cover, 18px below it. Title (800) top-left, level (600, ink) top-right, author and platform in quiet caption, hours and price right-aligned with tabular figures, then the note in ink at 1rem, then the link, then the small print (the year it was added, videos only) in quiet caption.
 
 ### Open link
 

@@ -26,7 +26,8 @@ const bannerStyle =
 // Only YouTube gives a stable thumbnail address; other platforms get a drawn plate.
 const thumb =
   d.cover ?? (d.platform === 'youtube' ? courseThumbnail(d.url, d.thumbnailVideoId) : null);
-const added = d.added.toLocaleDateString(locale, { year: 'numeric', month: 'short' });
+// Only the year of the day an entry was added is shown.
+const year = d.added.getFullYear();
 const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new tab';
 ---
 
@@ -82,11 +83,6 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
       </svg>
       <span class="sr-only">({newTab})</span>
     </a>
-    {!isChannel && <p class="topics">{d.topics.map((topic) => t.topics[topic]).join(' · ')}</p>}
-    <p class="small">
-      {isChannel
-        ? `${t.language}: ${t.languages[d.spoken]}`
-        : `${t.courseIn}: ${t.languages[d.spoken]} · ${t.addedOn} ${added}`}
-    </p>
+    {!isChannel && <p class="small">{`${t.addedIn} ${year}`}</p>}
   </div>
 </li>
