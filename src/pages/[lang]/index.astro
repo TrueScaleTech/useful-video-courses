@@ -46,11 +46,6 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
           ))}
         </select>
       </label>
-      <label class="check">
-        <input type="checkbox" name="free" />
-        <span class="mark" aria-hidden="true"></span>
-        {t.filterFreeOnly}
-      </label>
       <p class="count" id="count" aria-live="polite">
         {courses.length === 1 ? t.countOne : t.countMany.replace('{n}', String(courses.length))}
       </p>
@@ -84,13 +79,11 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
       function apply() {
         var topic = form.elements.topic.value;
         var level = form.elements.level.value;
-        var freeOnly = form.elements.free.checked;
         var shown = 0;
         cards.forEach(function (card) {
           var ok =
             (!topic || card.dataset.topics.split(' ').indexOf(topic) !== -1) &&
-            (!level || card.dataset.level === level) &&
-            (!freeOnly || card.dataset.free === 'true');
+            (!level || card.dataset.level === level);
           card.hidden = !ok;
           if (ok) shown += 1;
         });

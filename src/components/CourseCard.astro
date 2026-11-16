@@ -55,7 +55,6 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
       {d.author}, {t.platforms[d.platform]}
     </p>
     <p class="facts">
-      {d.free && <span class="mark" aria-hidden="true" />}
       {d.hours !== undefined && `${t.hours(d.hours)} · `}
       {d.free ? t.free : t.paid}
     </p>

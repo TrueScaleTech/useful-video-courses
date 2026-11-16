@@ -12,7 +12,7 @@ Course data is a handful of small YAML files, so adding a course means adding on
 ## What it does
 
 - Lists courses with title, author, platform, level, topics, duration, price (free or paid) and a note in English and Italian.
-- Filters by topic, level and "free only", with plain JavaScript that is optional: without it, every course stays visible.
+- Filters by topic and level, with plain JavaScript that is optional: without it, every course stays visible.
 - Hangs each course as a cover with a small label, like works on a gallery wall: a YouTube thumbnail for a YouTube video or playlist, and a typographic cover (the course title on a deep tone per first topic) for other platforms. Light and dark themes follow the reader's system, with a toggle in the header; the choice is kept only in the reader's own browser (local storage, no cookie).
 - Checks every link once a week and fails only when a page is gone.
 

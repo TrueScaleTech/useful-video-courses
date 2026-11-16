@@ -135,7 +135,7 @@ A near-neutral wall and ink pair, one vermilion mark, and ten deep topic tones t
 
 ### Primary
 
-- **Vermilion Mark** (#c8321e light, #ee6a52 dark): the single accent. Used as the small dot flagging a free course (card and the free-only filter), the focus ring (2px, 3px offset), text selection background, the checkbox accent, and the underline colour on link hover. Never a fill, a button or a heading colour.
+- **Vermilion Mark** (#c8321e light, #ee6a52 dark): the single accent. Used as the focus ring (2px, 3px offset), text selection background, and the underline colour on link hover. Never a fill, a button or a heading colour.
 
 ### Neutral
 
@@ -180,7 +180,7 @@ A near-neutral wall and ink pair, one vermilion mark, and ten deep topic tones t
 
 A single centred wrap, max 90rem, with a fluid side gutter of clamp(16px, 4vw, 56px). The masthead and footer rules stop at the content edge (drawn as a gradient inset by the gutter), matching the filter rules. The opening is a two-column grid (title 1.1fr, wall text 1fr, bottom-aligned) that collapses to one column at 62rem. The wall is a list grid: three columns, two below 62rem, one below 40rem; row gap clamp(36px, 5vw, 64px), column gap clamp(20px, 2.4vw, 32px). Covers are 16:9. Each label is a two-column grid: title and author left, level and facts (right aligned, no wrap) right; the note, link, topics and small print span both. Main carries 96px bottom padding.
 
-Filters are a caption-type line (topic, level, free only, count right-aligned) and are shown only when JavaScript runs; without it every course stays visible.
+Filters are a caption-type line (topic, level, count right-aligned) and are shown only when JavaScript runs; without it every course stays visible.
 
 ## Elevation & Depth
 
@@ -207,7 +207,7 @@ A 16:9 plate hung with the Hang shadow. YouTube courses show the thumbnail (obje
 
 ### Object label
 
-Grid under the cover, 18px below it. Title (800) top-left, level (600, ink) top-right, author and platform in quiet caption, hours and price right-aligned with tabular figures, then the note in ink at 1rem, then the link, then topics and the small print (language, date added) in quiet caption. A free course gets the vermilion dot before its facts.
+Grid under the cover, 18px below it. Title (800) top-left, level (600, ink) top-right, author and platform in quiet caption, hours and price right-aligned with tabular figures, then the note in ink at 1rem, then the link, then topics and the small print (language, date added) in quiet caption.
 
 ### Open link
 
@@ -215,7 +215,7 @@ Underlined caption line, 700 weight, 2px underline, a 14px stroke arrow icon (in
 
 ### Filters
 
-Caption-type row with a 1px ink top rule and hairline bottom rule. Selects are transparent, underline-only, min-width 10.5rem; the checkbox uses the mark as its accent beside a small dot. The live count is announced politely.
+Caption-type row with a 1px ink top rule and hairline bottom rule. Selects are transparent, underline-only, min-width 10.5rem; two selects (topic, level) and the count. The live count is announced politely.
 
 ### Navigation
 

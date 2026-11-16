@@ -22,7 +22,6 @@ interface Strings {
   toLightTheme: string;
   filterTopic: string;
   filterLevel: string;
-  filterFreeOnly: string;
   all: string;
   countOne: string;
   countMany: string;
@@ -47,7 +46,7 @@ export const STRINGS: Record<Locale, Strings> = {
     siteTitle: 'Useful video courses',
     tagline: 'Information security courses I found genuinely useful.',
     intro:
-      'A short, hand-picked list of video courses on security, networks and automation. Each one has a note from me on why it helped. Every link goes to the original page.',
+      'These are YouTube video courses on security, networking, automation and much more that I found especially useful and interesting. Every link goes to the YouTube video.',
     navCourses: 'Courses',
     navAbout: 'About',
     switchLanguage: 'Switch to Italian',
@@ -55,7 +54,6 @@ export const STRINGS: Record<Locale, Strings> = {
     toLightTheme: 'Switch to the light theme',
     filterTopic: 'Topic',
     filterLevel: 'Level',
-    filterFreeOnly: 'Free only',
     all: 'All',
     countOne: '1 course',
     countMany: '{n} courses',
@@ -106,7 +104,7 @@ export const STRINGS: Record<Locale, Strings> = {
     siteTitle: 'Videocorsi utili',
     tagline: 'Corsi di sicurezza informatica che ho trovato davvero utili.',
     intro:
-      'Un elenco breve e scelto a mano di videocorsi su sicurezza, reti e automazione. Per ognuno trovi una mia nota sul perché mi è servito. Ogni link porta alla pagina originale.',
+      'Questi sono video corsi YouTube sulla sicurezza, reti, automazione e molto altro che mi sono stati particolarmente utili e ho ritenuto interessanti. Ogni link porta al video YouTube.',
     navCourses: 'Corsi',
     navAbout: 'Informazioni',
     switchLanguage: 'Passa all’inglese',
@@ -114,7 +112,6 @@ export const STRINGS: Record<Locale, Strings> = {
     toLightTheme: 'Passa al tema chiaro',
     filterTopic: 'Argomento',
     filterLevel: 'Livello',
-    filterFreeOnly: 'Solo gratuiti',
     all: 'Tutti',
     countOne: '1 corso',
     countMany: '{n} corsi',
