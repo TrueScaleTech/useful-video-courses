@@ -1,0 +1,15 @@
+title: NetworkChuck
+author: Chuck Keith
+platform: youtube
+kind: channel
+url: https://youtube.com/@NetworkChuck
+level: beginner
+topics: [networking]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: Networking, Linux and cybersecurity explained in an energetic, beginner-friendly style.
+  it: Reti, Linux e sicurezza informatica spiegati in modo energico e adatto ai principianti.
+added: 2026-11-16
+draft: false

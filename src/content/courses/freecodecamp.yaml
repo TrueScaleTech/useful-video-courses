@@ -1,0 +1,15 @@
+title: freeCodeCamp.org
+author: freeCodeCamp
+platform: youtube
+kind: channel
+url: https://youtube.com/@freecodecamp
+level: beginner
+topics: [fundamentals]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: Free full-length courses on programming and computer science, from the freeCodeCamp nonprofit.
+  it: Corsi completi e gratuiti di programmazione e informatica, dell'organizzazione non profit freeCodeCamp.
+added: 2026-11-16
+draft: false
