@@ -31,6 +31,19 @@ test('YouTube links are probed through oEmbed, others directly', () => {
   assert.equal(probeUrl('https://www.udemy.com/course/x/'), 'https://www.udemy.com/course/x/');
 });
 
+test('YouTube channel pages are requested directly, since oEmbed does not know channels', () => {
+  assert.equal(probeUrl('https://youtube.com/@freecodecamp'), 'https://youtube.com/@freecodecamp');
+  assert.equal(
+    probeUrl('https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ'),
+    'https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ',
+  );
+  assert.ok(
+    probeUrl('https://www.youtube.com/playlist?list=PL123').startsWith(
+      'https://www.youtube.com/oembed',
+    ),
+  );
+});
+
 test('drafts and example.com placeholders are skipped', () => {
   assert.equal(shouldCheck({ url: 'https://www.udemy.com/course/x/', draft: false }), true);
   assert.equal(shouldCheck({ url: 'https://www.udemy.com/course/x/', draft: true }), false);

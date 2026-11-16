@@ -13,11 +13,22 @@ export function classify(status) {
   return UNKNOWN;
 }
 
-/** The address to ask. YouTube is checked through its oEmbed endpoint, which answers 404 for removed or private videos. */
+// Paths that name one video or playlist. Channel pages (/@name, /channel/..., /c/..., /user/...) do not.
+const YOUTUBE_MEDIA_PATHS = ['/watch', '/playlist', '/embed/', '/shorts/', '/live/'];
+
+/**
+ * The address to ask. A YouTube video or playlist is checked through its oEmbed endpoint, which
+ * answers 404 for removed or private videos. oEmbed does not know channels, so a channel page is
+ * requested directly, like any other link.
+ */
 export function probeUrl(link) {
   const url = new URL(link);
   if (YOUTUBE_HOSTS.has(url.hostname)) {
-    return `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(link)}`;
+    const isMedia =
+      url.hostname === 'youtu.be' || YOUTUBE_MEDIA_PATHS.some((p) => url.pathname.startsWith(p));
+    if (isMedia) {
+      return `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(link)}`;
+    }
   }
   return link;
 }
