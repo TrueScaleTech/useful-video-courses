@@ -1,0 +1,15 @@
+title: Secure your HomeLab for FREE // Wazuh
+author: Christian Lempa
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=RjvKn0Q3rgg
+level: intermediate
+topics: [blue-team]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: Securing a homelab for free with Wazuh, an open source security platform.
+  it: Come mettere in sicurezza un homelab gratis con Wazuh, una piattaforma di sicurezza open source.
+added: 2026-11-16
+draft: false

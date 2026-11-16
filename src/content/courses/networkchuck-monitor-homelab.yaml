@@ -1,0 +1,15 @@
+title: You can monitor EVERYTHING in your homelab with this
+author: NetworkChuck
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=Bjifz55TTPI
+level: intermediate
+topics: [networking]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: How to monitor every device and service in a homelab.
+  it: Come tenere sotto controllo ogni dispositivo e servizio di un homelab.
+added: 2026-11-16
+draft: false
