@@ -1,4 +1,4 @@
-import type { LEVELS, PLATFORMS, TOPICS } from './content.config';
+import type { KINDS, LEVELS, PLATFORMS, TOPICS } from './content.config';
 
 export const LOCALES = ['en', 'it'] as const;
 export type Locale = (typeof LOCALES)[number];
@@ -10,6 +10,7 @@ export function isLocale(value: string | undefined): value is Locale {
 type Level = (typeof LEVELS)[number];
 type Platform = (typeof PLATFORMS)[number];
 type Topic = (typeof TOPICS)[number];
+type Kind = (typeof KINDS)[number];
 
 interface Strings {
   siteTitle: string;
@@ -20,8 +21,8 @@ interface Strings {
   switchLanguage: string;
   toDarkTheme: string;
   toLightTheme: string;
-  filterTopic: string;
-  filterLevel: string;
+  filterKind: string;
+  kinds: Record<Kind, string>;
   all: string;
   countOne: string;
   countMany: string;
@@ -52,8 +53,8 @@ export const STRINGS: Record<Locale, Strings> = {
     switchLanguage: 'Switch to Italian',
     toDarkTheme: 'Switch to the dark theme',
     toLightTheme: 'Switch to the light theme',
-    filterTopic: 'Topic',
-    filterLevel: 'Level',
+    filterKind: 'Type',
+    kinds: { video: 'Video', channel: 'Channel' },
     all: 'All',
     countOne: '1 course',
     countMany: '{n} courses',
@@ -110,8 +111,8 @@ export const STRINGS: Record<Locale, Strings> = {
     switchLanguage: 'Passa all’inglese',
     toDarkTheme: 'Passa al tema scuro',
     toLightTheme: 'Passa al tema chiaro',
-    filterTopic: 'Argomento',
-    filterLevel: 'Livello',
+    filterKind: 'Tipo',
+    kinds: { video: 'Video', channel: 'Canale' },
     all: 'Tutti',
     countOne: '1 corso',
     countMany: '{n} corsi',

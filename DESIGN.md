@@ -180,7 +180,7 @@ A near-neutral wall and ink pair, one vermilion mark, and ten deep topic tones t
 
 A single centred wrap, max 90rem, with a fluid side gutter of clamp(16px, 4vw, 56px). The masthead and footer rules stop at the content edge (drawn as a gradient inset by the gutter), matching the filter rules. The opening is a two-column grid (title 1.1fr, wall text 1fr, bottom-aligned) that collapses to one column at 62rem. The wall is a list grid: three columns, two below 62rem, one below 40rem; row gap clamp(36px, 5vw, 64px), column gap clamp(20px, 2.4vw, 32px). Covers are 16:9. Each label is a two-column grid: title and author left, level and facts (right aligned, no wrap) right; the note, link, topics and small print span both. Main carries 96px bottom padding.
 
-Filters are a caption-type line (topic, level, count right-aligned) and are shown only when JavaScript runs; without it every course stays visible.
+Filters are a caption-type line (a single type select, video or channel, with the count right-aligned) and are shown only when JavaScript runs; without it every course stays visible.
 
 ## Elevation & Depth
 
@@ -215,7 +215,7 @@ Underlined caption line, 700 weight, 2px underline, a 14px stroke arrow icon (in
 
 ### Filters
 
-Caption-type row with a 1px ink top rule and hairline bottom rule. Selects are transparent, underline-only, min-width 10.5rem; two selects (topic, level) and the count. The live count is announced politely.
+Caption-type row with a 1px ink top rule and hairline bottom rule. Selects are transparent, underline-only, min-width 10.5rem; one select (type) and the count. The live count is announced politely.
 
 ### Navigation
 

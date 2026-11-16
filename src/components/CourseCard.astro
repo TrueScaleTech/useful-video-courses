@@ -17,12 +17,7 @@ const added = d.added.toLocaleDateString(locale, { year: 'numeric', month: 'shor
 const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new tab';
 ---
 
-<li
-  class="work"
-  data-level={d.level}
-  data-topics={d.topics.join(' ')}
-  data-free={d.free ? 'true' : 'false'}
->
+<li class="work" data-kind={d.kind}>
   <!-- The cover is a second route to the same link; keyboard and screen-reader users get the caption link. -->
   <a
     class="cover-link"
@@ -52,7 +47,7 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
     <h2>{d.title}</h2>
     <p class="level">{t.levels[d.level]}</p>
     <p class="who">
-      {d.author}, {t.platforms[d.platform]}
+      {d.author}, {t.platforms[d.platform]} · {t.kinds[d.kind]}
     </p>
     <p class="facts">
       {d.hours !== undefined && `${t.hours(d.hours)} · `}

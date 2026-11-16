@@ -3,6 +3,8 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 export const PLATFORMS = ['youtube', 'udemy', 'coursera', 'other'] as const;
+// A single video (or playlist of a course) or a whole channel.
+export const KINDS = ['video', 'channel'] as const;
 export const LEVELS = ['beginner', 'intermediate', 'advanced'] as const;
 export const TOPICS = [
   'fundamentals',
@@ -23,6 +25,7 @@ const courses = defineCollection({
     title: z.string().min(1),
     author: z.string().min(1),
     platform: z.enum(PLATFORMS),
+    kind: z.enum(KINDS),
     // Always a plain link to the original page: no embedded player, no copied text or images.
     url: z.string().refine((u) => URL.canParse(u) && u.startsWith('https://'), {
       message: 'url must be a valid https link',

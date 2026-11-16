@@ -3,6 +3,7 @@
 title: Example course (replace me)
 author: Example Author
 platform: youtube
+kind: video # video or channel
 url: https://www.youtube.com/watch?v=AAAAAAAAAAA
 level: beginner
 topics: [fundamentals, networking]

@@ -1,8 +1,9 @@
 # Placeholder entry. It is a draft, so it never appears on the built site.
 title: Example advanced course (replace me)
 author: Example Platform
-platform: udemy
-url: https://example.com/course-two
+platform: youtube
+kind: channel
+url: https://www.youtube.com/@example-channel
 level: advanced
 topics: [firewalls, automation]
 hours: 9.5

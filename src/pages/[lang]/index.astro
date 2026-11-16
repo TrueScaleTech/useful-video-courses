@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CourseCard from '../../components/CourseCard.astro';
 import { LOCALES, STRINGS, type Locale } from '../../i18n';
-import { LEVELS, TOPICS } from '../../content.config';
+import { KINDS } from '../../content.config';
 
 export function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
@@ -17,7 +17,6 @@ const showDrafts = process.env.SHOW_DRAFTS === '1';
 const courses = (await getCollection('courses', ({ data }) => showDrafts || !data.draft)).sort(
   (a, b) => b.data.added.getTime() - a.data.added.getTime(),
 );
-const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.includes(topic)));
 ---
 
 <Base locale={locale} page="courses">
@@ -29,20 +28,11 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
   {courses.length > 0 && (
     <form class="filters" id="filters" aria-label={t.navCourses} hidden>
       <label>
-        {t.filterTopic}
-        <select name="topic">
+        {t.filterKind}
+        <select name="kind">
           <option value="">{t.all}</option>
-          {usedTopics.map((topic) => (
-            <option value={topic}>{t.topics[topic]}</option>
-          ))}
-        </select>
-      </label>
-      <label>
-        {t.filterLevel}
-        <select name="level">
-          <option value="">{t.all}</option>
-          {LEVELS.map((level) => (
-            <option value={level}>{t.levels[level]}</option>
+          {KINDS.map((kind) => (
+            <option value={kind}>{t.kinds[kind]}</option>
           ))}
         </select>
       </label>
@@ -77,13 +67,10 @@ const usedTopics = TOPICS.filter((topic) => courses.some((c) => c.data.topics.in
       }
 
       function apply() {
-        var topic = form.elements.topic.value;
-        var level = form.elements.level.value;
+        var kind = form.elements.kind.value;
         var shown = 0;
         cards.forEach(function (card) {
-          var ok =
-            (!topic || card.dataset.topics.split(' ').indexOf(topic) !== -1) &&
-            (!level || card.dataset.level === level);
+          var ok = !kind || card.dataset.kind === kind;
           card.hidden = !ok;
           if (ok) shown += 1;
         });
