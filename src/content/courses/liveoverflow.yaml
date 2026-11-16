@@ -7,7 +7,7 @@ cover: https://yt3.googleusercontent.com/oivea-i5XZo24h_GEUNThQrz1VWkvaOnomWnxiP
 level: intermediate
 topics: [appsec]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: Web security, binary exploitation and reverse engineering, explained through hands-on challenges.
   it: Sicurezza web, binary exploitation e reverse engineering, spiegati con sfide pratiche.

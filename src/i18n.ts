@@ -72,7 +72,7 @@ export const STRINGS: Record<Locale, Strings> = {
     aboutSections: [
       {
         heading: 'How I choose',
-        body: 'I only list courses I have followed, at least in part, and found clear and useful. The notes are my own opinion, not a review from the author or the platform.',
+        body: 'I list videos and channels that I found especially useful and interesting. Each entry has a short description; it is not a review from the author or the platform.',
       },
       {
         heading: 'Links only',
@@ -120,7 +120,7 @@ export const STRINGS: Record<Locale, Strings> = {
     aboutSections: [
       {
         heading: 'Come scelgo',
-        body: 'Inserisco solo corsi che ho seguito, almeno in parte, e che ho trovato chiari e utili. Le note sono una mia opinione, non una recensione dell’autore o della piattaforma.',
+        body: 'Inserisco video e canali che mi sono stati particolarmente utili e che ho ritenuto interessanti. Ogni scheda ha una breve descrizione, che non è una recensione dell’autore o della piattaforma.',
       },
       {
         heading: 'Solo link',

@@ -114,7 +114,7 @@ components:
 
 **Creative North Star: "Parete di museo" (the gallery wall)**
 
-The list is an exhibition one person curated. Covers hang on an off-white wall, each with a small object label beneath it: title, author, level, hours and price, then the owner's note. The page reads as wall text plus labels, not as a catalogue of cards. Type is a single grotesque (Hanken Grotesk Variable) pushed to heavy weight and tight tracking for display, and kept small and quiet for captions. The dark theme is the same room at night.
+The list is an exhibition one person curated. Covers hang on an off-white wall, each with a small object label beneath it: title, author, level, hours and price, then a short description. The page reads as wall text plus labels, not as a catalogue of cards. Type is a single grotesque (Hanken Grotesk Variable) pushed to heavy weight and tight tracking for display, and kept small and quiet for captions. The dark theme is the same room at night.
 
 Density is airy at the top (a large two-line title beside an intro paragraph) and measured below (a three-column wall, two at tablet, one at phone). Depth is a soft contact shadow under each cover, as if hung, and nothing else. There is exactly one accent, a vermilion mark, used sparingly.
 
@@ -168,7 +168,7 @@ A near-neutral wall and ink pair, one vermilion mark, and ten deep topic tones t
 - **Title** (800, 1.1875rem, 1.25, -0.015em): course title in the object label.
 - **Headline** (800, 1.25rem, -0.015em): About section headings.
 - **Wall text** (400, 1.125rem, 1.55): the intro paragraph, max 34rem.
-- **Body** (400, 1rem, 1.5): the owner's note, max 34rem; About prose at 65ch.
+- **Body** (400, 1rem, 1.5): the short description, max 34rem; About prose at 65ch.
 - **Label** (400, 0.875rem): author and platform, hours and price, topics, filters, count (tabular numerals). Level is the same size at 600 in ink.
 - **Link** (700, 0.95rem, 2px underline): the "open the course" line.
 

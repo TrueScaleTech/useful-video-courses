@@ -7,7 +7,7 @@ cover: https://yt3.googleusercontent.com/uZszpaaU2lNm7Lh5Bmtl3FzyMWQC4xQNZh0K0yj
 level: intermediate
 topics: [pentest]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: Penetration testing and offensive security, with Kali Linux tutorials and hands-on walkthroughs.
   it: Penetration testing e sicurezza offensiva, con tutorial su Kali Linux e dimostrazioni pratiche.

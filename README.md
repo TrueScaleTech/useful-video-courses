@@ -3,7 +3,7 @@
 [![CI](https://github.com/TrueScaleTech/useful-video-courses/actions/workflows/ci.yml/badge.svg)](https://github.com/TrueScaleTech/useful-video-courses/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-A small, hand-picked list of video courses on information security, networks and automation that I found genuinely useful, each with a short personal note. The site is static, bilingual (English and Italian) and every entry is a plain link to the original page.
+A small, hand-picked list of YouTube channels and videos on information security, networks and automation that I found useful and interesting, each with a short description. The site is static, bilingual (English and Italian) and every entry is a plain link to the original page.
 
 Course data is a handful of small YAML files, so adding a course means adding one text file. No video is ever stored here.
 
@@ -58,7 +58,7 @@ topics: [firewalls, automation] # see src/content.config.ts
 hours: 6.5 # optional
 free: true
 note:
-  en: One or two sentences of your own on why it helped.
+  en: One or two sentences describing it, in your own words.
   it: Una o due frasi tue sul perché è stato utile.
 added: 2026-11-13
 draft: false
@@ -99,7 +99,7 @@ These are the same four steps the CI runs on Linux and Windows with Node 22 and 
 
 ## Scope and limits
 
-This is a personal list of opinions, not a ranking and not a review by the authors. Courses change or disappear: if a link is wrong, [open an issue](https://github.com/TrueScaleTech/useful-video-courses/issues/new/choose).
+This is a personal selection, not a ranking and not a review by the authors. Courses change or disappear: if a link is wrong, [open an issue](https://github.com/TrueScaleTech/useful-video-courses/issues/new/choose).
 
 ## AI assistance
 

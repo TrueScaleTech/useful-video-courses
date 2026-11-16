@@ -7,7 +7,7 @@ level: intermediate
 topics: [fundamentals]
 hours: 32
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: A long course on blockchain, Solidity and full stack Web3 development with JavaScript.
   it: Un lungo corso su blockchain, Solidity e sviluppo Web3 full stack con JavaScript.

@@ -12,11 +12,11 @@ A mixed audience, none privileged: people starting or changing into information 
 
 ## Product Purpose
 
-A short, hand-picked list of video courses on information security, networks and automation that the owner found genuinely useful, each with a short personal note on why. It exists to save the reader time by replacing a search result page with a trusted selection, and to show the owner's judgement in the field. Success: a reader opens the right course quickly and trusts the list; a visitor from the portfolio sees careful, professional work.
+A short, hand-picked list of video courses on information security, networks and automation that the owner found useful and interesting, each with a short description. It exists to save the reader time by replacing a search result page with a trusted selection, and to show the owner's judgement in the field. Success: a reader opens the right course quickly and trusts the list; a visitor from the portfolio sees careful, professional work.
 
 ## Positioning
 
-A personal, opinionated selection, not a catalogue and not a ranking: every entry carries the owner's own note, written by hand. It is also private by construction (no cookies, no analytics, no third-party scripts or fonts) and links only, never copying or embedding course content, which a commercial course directory or affiliate-driven list could not truthfully claim.
+A personal selection, not a catalogue and not a ranking: every entry was chosen by the owner and carries a short description written by hand. It is also private by construction (no cookies, no analytics, no third-party scripts or fonts) and links only, never copying or embedding course content, which a commercial course directory or affiliate-driven list could not truthfully claim.
 
 ## Operating Context
 
@@ -42,7 +42,7 @@ Real course entries do not exist yet: the two files in `src/content/courses/` ar
 
 ## Product Principles
 
-1. The owner's judgement is the product: each course earns its place with a note, and the page never pads the list.
+1. The owner's judgement is the product: each entry earns its place by being chosen, and the page never pads the list.
 2. Trust over reach: honest wording, no affiliate or tracking incentives, no claims the site cannot back.
 3. Respect the reader's time: the right course should be findable and openable in seconds, in either language.
 4. Private and light by construction: nothing loads that the reader did not ask for, beyond YouTube thumbnails.

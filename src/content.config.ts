@@ -60,7 +60,7 @@ const courses = defineCollection({
     topics: z.array(z.enum(TOPICS)).min(1),
     hours: z.number().positive().optional(),
     free: z.boolean(),
-    // Personal notes, written by hand in both languages. Never copied from the course.
+    // A short description in both languages, written by hand. Never copied from the course page.
     note: z.object({
       en: z.string().min(1).max(300),
       it: z.string().min(1).max(300),

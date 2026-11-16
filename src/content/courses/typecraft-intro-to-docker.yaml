@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=Ud7Npgi6x8E
 level: beginner
 topics: [cloud]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: An introduction to Docker for people starting out with containers.
   it: Un'introduzione a Docker per chi comincia con i container.

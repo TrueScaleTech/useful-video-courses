@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=RjvKn0Q3rgg
 level: intermediate
 topics: [blue-team]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: Securing a homelab for free with Wazuh, an open source security platform.
   it: Come mettere in sicurezza un homelab gratis con Wazuh, una piattaforma di sicurezza open source.

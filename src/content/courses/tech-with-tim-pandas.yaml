@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=EXIgjIBu4EU
 level: beginner
 topics: [fundamentals]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: A 30-minute introduction to Pandas, the Python data analysis library.
   it: Un'introduzione di 30 minuti a Pandas, la libreria Python per l'analisi dei dati.

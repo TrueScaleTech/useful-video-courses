@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=efl2kuPNEpE
 level: intermediate
 topics: [homelab]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: A tour of the 50+ self-hosted services running in the author's homelab.
   it: Un giro tra i più di 50 servizi self-hosted che girano nell'homelab dell'autore.

@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=1hvVcEhcbLM
 level: beginner
 topics: [fundamentals]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: A full course on the Linux skills that ethical hacking relies on.
   it: Un corso completo sulle competenze Linux su cui si basa l'ethical hacking.

@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=oGPjzCBZGzg
 level: beginner
 topics: [cloud]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: What Docker and Kubernetes each do, and how they relate to containers.
   it: Cosa fanno Docker e Kubernetes e come si legano ai container.

@@ -11,7 +11,7 @@ coverFocusY: 48.5
 level: beginner
 topics: [networking]
 free: true
-# Draft wording: replace with your own note on why it helped.
+# Short description: replace it with your own wording if you like.
 note:
   en: Networking, Linux, Python and ethical hacking, with full courses and interviews with experts.
   it: Reti, Linux, Python ed ethical hacking, con corsi completi e interviste a esperti.
