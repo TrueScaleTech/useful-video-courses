@@ -1,0 +1,15 @@
+title: 'Docker vs. Kubernetes: The ONLY Video You Need to Finally Understand Containers!'
+author: The Coding Gopher
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=oGPjzCBZGzg
+level: beginner
+topics: [cloud]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: What Docker and Kubernetes each do, and how they relate to containers.
+  it: Cosa fanno Docker e Kubernetes e come si legano ai container.
+added: 2026-11-16
+draft: false

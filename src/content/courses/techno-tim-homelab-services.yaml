@@ -1,0 +1,15 @@
+title: What’s Actually Running in My Homelab? (50+ Self-Hosted Services)
+author: Techno Tim
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=efl2kuPNEpE
+level: intermediate
+topics: [homelab]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: A tour of the 50+ self-hosted services running in the author's homelab.
+  it: Un giro tra i più di 50 servizi self-hosted che girano nell'homelab dell'autore.
+added: 2026-11-16
+draft: false

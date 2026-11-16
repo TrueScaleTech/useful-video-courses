@@ -1,0 +1,15 @@
+title: What is a Homelab?
+author: Techquickie
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=5bsI3M44NWo
+level: beginner
+topics: [homelab]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: A short introduction to what a homelab is and what it is used for.
+  it: Una breve introduzione a cosa è un homelab e a cosa serve.
+added: 2026-11-16
+draft: false

@@ -1,0 +1,15 @@
+title: Hacking Gadgets Every Cybersecurity Pro Should Know
+author: David Bombal
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=6ckvxEQEBn8
+level: intermediate
+topics: [pentest]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: A look at the hardware gadgets used by penetration testers and security professionals.
+  it: Uno sguardo ai dispositivi hardware usati da penetration tester e professionisti della sicurezza.
+added: 2026-11-16
+draft: false

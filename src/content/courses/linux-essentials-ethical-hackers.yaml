@@ -1,0 +1,15 @@
+title: Linux Essentials for Ethical Hackers - Full InfoSec Course
+author: freeCodeCamp.org
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=1hvVcEhcbLM
+level: beginner
+topics: [fundamentals]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: A full course on the Linux skills that ethical hacking relies on.
+  it: Un corso completo sulle competenze Linux su cui si basa l'ethical hacking.
+added: 2026-11-16
+draft: false

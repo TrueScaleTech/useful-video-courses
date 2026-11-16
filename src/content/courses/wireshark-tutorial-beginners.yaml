@@ -1,0 +1,15 @@
+title: Wireshark Tutorial for Beginners | Network Scanning Made Easy
+author: Anson Alexander
+platform: youtube
+kind: video
+url: https://www.youtube.com/watch?v=qTaOZrDnMzQ
+level: beginner
+topics: [networking]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: A beginner tutorial on Wireshark, the network traffic analyzer.
+  it: Un tutorial per principianti su Wireshark, l'analizzatore del traffico di rete.
+added: 2026-11-16
+draft: false
