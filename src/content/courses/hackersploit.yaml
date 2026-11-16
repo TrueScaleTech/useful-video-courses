@@ -1,0 +1,16 @@
+title: HackerSploit
+author: HackerSploit
+platform: youtube
+kind: channel
+url: https://www.youtube.com/@HackerSploit
+cover: https://yt3.googleusercontent.com/uZszpaaU2lNm7Lh5Bmtl3FzyMWQC4xQNZh0K0yjwq9CZIocvRtQONZWXFH-wupbmNEfaDYV1P-E=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
+level: intermediate
+topics: [pentest]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: Penetration testing and offensive security, with Kali Linux tutorials and hands-on walkthroughs.
+  it: Penetration testing e sicurezza offensiva, con tutorial su Kali Linux e dimostrazioni pratiche.
+added: 2026-11-16
+draft: false
