@@ -298,6 +298,10 @@ main {
   object-fit: cover;
   display: block;
 }
+/* A channel banner is a very wide strip: show all of it on the topic's tone instead of cropping its sides. */
+.cover img.banner {
+  object-fit: contain;
+}
 .cover[data-topic='fundamentals'] {
   --plate-other: var(--tone-fundamentals);
 }
