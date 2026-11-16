@@ -3,13 +3,14 @@ author: Chuck Keith
 platform: youtube
 kind: channel
 url: https://youtube.com/@NetworkChuck
+cover: https://yt3.googleusercontent.com/CnrmLZnjdLcaeGS2dmZvaO_iPqn1DRiONNiM2yEA80ESok0NOa9QySmZSsUy7sLSZNLZViPYwE0=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj
 level: beginner
 topics: [networking]
 spoken: en
 free: true
 # Draft wording: replace with your own note on why it helped.
 note:
-  en: Networking, Linux and cybersecurity explained in an energetic, beginner-friendly style.
-  it: Reti, Linux e sicurezza informatica spiegati in modo energico e adatto ai principianti.
+  en: Networking, Linux and cybersecurity explained in an energetic style.
+  it: Reti, Linux e sicurezza informatica spiegati in modo energico.
 added: 2026-11-16
 draft: false

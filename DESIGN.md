@@ -203,7 +203,7 @@ Square and ruled. Covers and controls have no radius; separation comes from 1px 
 
 ### Cover
 
-A 16:9 plate hung with the Hang shadow. YouTube courses show the thumbnail (object-fit: cover, only from i.ytimg.com, no referrer); all others show the typographic plate: Plate type in white, bottom-left, on the first topic's tone. The cover link is a mouse-only second route (aria-hidden, tabindex -1); the caption link is the accessible one.
+A 16:9 plate hung with the Hang shadow. YouTube entries show a cover image (object-fit: cover, only from the YouTube image hosts i.ytimg.com and yt3.googleusercontent.com, no referrer): the channel banner when the entry sets `cover`, otherwise the video thumbnail. Entries with neither show the typographic plate: Plate type in white, bottom-left, on the first topic's tone. The cover link is a mouse-only second route (aria-hidden, tabindex -1); the caption link is the accessible one.
 
 ### Object label
 

@@ -28,6 +28,8 @@ interface Strings {
   countMany: string;
   empty: string;
   visit: string;
+  visitChannel: string;
+  language: string;
   hours: (h: number) => string;
   free: string;
   paid: string;
@@ -60,6 +62,8 @@ export const STRINGS: Record<Locale, Strings> = {
     countMany: '{n} courses',
     empty: 'No course matches these filters.',
     visit: 'Open the course',
+    visitChannel: 'Open the channel',
+    language: 'Language',
     hours: (h) => `${h} h`,
     free: 'Free',
     paid: 'Paid',
@@ -77,7 +81,7 @@ export const STRINGS: Record<Locale, Strings> = {
       },
       {
         heading: 'Privacy',
-        body: 'No cookies, no analytics, no third-party fonts or scripts. For YouTube courses, the thumbnail is loaded straight from YouTube’s image server, which therefore sees your IP address; this site sends no referrer with that request. Nothing else is loaded from any platform until you click a link, and what happens after that is governed by their own policies. If you choose a theme with the toggle, that choice is saved only in your own browser and never sent anywhere.',
+        body: 'No cookies, no analytics, no third-party fonts or scripts. For YouTube courses, the thumbnail or channel banner is loaded straight from YouTube’s image servers, which therefore see your IP address; this site sends no referrer with that request. Nothing else is loaded from any platform until you click a link, and what happens after that is governed by their own policies. If you choose a theme with the toggle, that choice is saved only in your own browser and never sent anywhere.',
       },
       {
         heading: 'Independence',
@@ -98,6 +102,7 @@ export const STRINGS: Record<Locale, Strings> = {
       grc: 'Governance and compliance',
       automation: 'Automation',
       'ai-security': 'AI security',
+      ai: 'Artificial intelligence',
     },
     languages: { en: 'English', it: 'Italian' },
   },
@@ -118,6 +123,8 @@ export const STRINGS: Record<Locale, Strings> = {
     countMany: '{n} corsi',
     empty: 'Nessun corso corrisponde ai filtri.',
     visit: 'Apri il corso',
+    visitChannel: 'Apri il canale',
+    language: 'Lingua',
     hours: (h) => `${String(h).replace('.', ',')} h`,
     free: 'Gratuito',
     paid: 'A pagamento',
@@ -135,7 +142,7 @@ export const STRINGS: Record<Locale, Strings> = {
       },
       {
         heading: 'Privacy',
-        body: 'Nessun cookie, nessuna analisi, nessun font o script di terzi. Per i corsi YouTube la miniatura viene caricata direttamente dal server di immagini di YouTube, che quindi vede il tuo indirizzo IP; il sito non invia alcun referrer con quella richiesta. Nient’altro viene caricato da una piattaforma finché non clicchi un link; da lì in poi valgono le loro regole. Se scegli un tema con l’interruttore, la scelta resta solo nel tuo browser e non viene mai inviata.',
+        body: 'Nessun cookie, nessuna analisi, nessun font o script di terzi. Per i corsi YouTube la miniatura o il banner del canale viene caricato direttamente dai server di immagini di YouTube, che quindi vedono il tuo indirizzo IP; il sito non invia alcun referrer con quella richiesta. Nient’altro viene caricato da una piattaforma finché non clicchi un link; da lì in poi valgono le loro regole. Se scegli un tema con l’interruttore, la scelta resta solo nel tuo browser e non viene mai inviata.',
       },
       {
         heading: 'Indipendenza',
@@ -156,6 +163,7 @@ export const STRINGS: Record<Locale, Strings> = {
       grc: 'Governance e conformità',
       automation: 'Automazione',
       'ai-security': 'Sicurezza dell’IA',
+      ai: 'Intelligenza artificiale',
     },
     languages: { en: 'Inglese', it: 'Italiano' },
   },

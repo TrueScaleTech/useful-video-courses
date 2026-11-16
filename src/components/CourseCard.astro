@@ -11,8 +11,10 @@ interface Props {
 const { course, locale } = Astro.props;
 const t = STRINGS[locale];
 const d = course.data;
+const isChannel = d.kind === 'channel';
 // Only YouTube gives a stable thumbnail address; other platforms get a drawn plate.
-const thumb = d.platform === 'youtube' ? courseThumbnail(d.url, d.thumbnailVideoId) : null;
+const thumb =
+  d.cover ?? (d.platform === 'youtube' ? courseThumbnail(d.url, d.thumbnailVideoId) : null);
 const added = d.added.toLocaleDateString(locale, { year: 'numeric', month: 'short' });
 const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new tab';
 ---
@@ -55,7 +57,7 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
     </p>
     <p class="note">{d.note[locale]}</p>
     <a class="open" href={d.url} rel="noopener noreferrer" target="_blank">
-      {t.visit}
+      {isChannel ? t.visitChannel : t.visit}
       <svg
         viewBox="0 0 14 14"
         fill="none"
@@ -67,9 +69,11 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
       </svg>
       <span class="sr-only">({newTab})</span>
     </a>
-    <p class="topics">{d.topics.map((topic) => t.topics[topic]).join(' · ')}</p>
+    {!isChannel && <p class="topics">{d.topics.map((topic) => t.topics[topic]).join(' · ')}</p>}
     <p class="small">
-      {t.courseIn}: {t.languages[d.spoken]} · {t.addedOn} {added}
+      {isChannel
+        ? `${t.language}: ${t.languages[d.spoken]}`
+        : `${t.courseIn}: ${t.languages[d.spoken]} · ${t.addedOn} ${added}`}
     </p>
   </div>
 </li>

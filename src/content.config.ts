@@ -17,6 +17,7 @@ export const TOPICS = [
   'grc',
   'automation',
   'ai-security',
+  'ai',
 ] as const;
 
 const courses = defineCollection({
@@ -35,6 +36,19 @@ const courses = defineCollection({
     thumbnailVideoId: z
       .string()
       .regex(/^[A-Za-z0-9_-]{11}$/)
+      .optional(),
+    // Optional cover image for the card, typically a YouTube channel banner. It is loaded by the
+    // reader's browser from YouTube's image host and never stored in this repo; it wins over the
+    // video thumbnail. Only that one host is allowed, because the page's CSP allows only that host.
+    cover: z
+      .string()
+      .refine(
+        (u) =>
+          URL.canParse(u) &&
+          new URL(u).protocol === 'https:' &&
+          new URL(u).hostname === 'yt3.googleusercontent.com',
+        { message: 'cover must be an https image on yt3.googleusercontent.com' },
+      )
       .optional(),
     level: z.enum(LEVELS),
     topics: z.array(z.enum(TOPICS)).min(1),

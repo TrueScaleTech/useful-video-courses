@@ -20,7 +20,7 @@ Course data is a handful of small YAML files, so adding a course means adding on
 
 - It does not host, copy or embed videos, transcripts or course material.
 - It does not store thumbnails: the image is loaded by the visitor's browser straight from YouTube's image host, without sending a referrer.
-- No cookies, no analytics, no third-party scripts. The one typeface (Hanken Grotesk) is self-hosted. A Content-Security-Policy in every page allows images from `i.ytimg.com` and nothing else.
+- No cookies, no analytics, no third-party scripts. The one typeface (Hanken Grotesk) is self-hosted. A Content-Security-Policy in every page allows images from the two YouTube image hosts (`i.ytimg.com` for thumbnails, `yt3.googleusercontent.com` for channel banners) and nothing else.
 
 ## Quick start
 

@@ -56,7 +56,7 @@ jobs:
             echo "A draft placeholder leaked into the build" >&2
             exit 1
           fi
-          loaded=$(grep -rhoE '<(script|iframe|img|embed|object|source|video|audio|link)\b[^>]*(src|href)="https?://[^"]+"' dist --include=*.html | grep -v 'i\.ytimg\.com' || true)
+          loaded=$(grep -rhoE '<(script|iframe|img|embed|object|source|video|audio|link)\b[^>]*(src|href)="https?://[^"]+"' dist --include=*.html | grep -vE 'i\.ytimg\.com|yt3\.googleusercontent\.com' || true)
           if [ -n "$loaded" ]; then
             echo "A page loads a resource from another origin:" >&2
             echo "$loaded" >&2

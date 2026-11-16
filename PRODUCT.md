@@ -27,7 +27,7 @@ Static site on GitHub Pages, published from the public repository `TrueScaleTech
 - Shows courses with title, author, platform (YouTube, Udemy, Coursera, other), level, topics, duration, free or paid, course language, date added, and a note in English and Italian.
 - Filters by type (a single video or a whole channel); filters are optional JavaScript and every course stays visible without it.
 - Every entry is a plain external link to the original page. No embedded player, no copied text or images.
-- YouTube thumbnails are the only third-party load, fetched straight from `i.ytimg.com` without a referrer under a Content-Security-Policy; other platforms get a drawn placeholder. Nothing else may be loaded from another origin.
+- YouTube thumbnails and channel banners are the only third-party loads, fetched straight from `i.ytimg.com` and `yt3.googleusercontent.com` without a referrer under a Content-Security-Policy; entries without an image get a typographic cover. Nothing else may be loaded from another origin.
 - Expected size: up to about 21 courses.
 - No affiliate links, accounts, comments or analytics.
 - Code, comments and documentation in English; user-facing text in Italian and English.

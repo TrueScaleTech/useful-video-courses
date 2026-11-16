@@ -12,7 +12,7 @@ A static website generated at build time. It has no server, no database, no acco
 
 - Every course is a plain external link opened with `rel="noopener noreferrer"`.
 - No cookies, no analytics, no third-party scripts or fonts, no embedded players.
-- The only third-party request a page makes is for YouTube course thumbnails from `i.ytimg.com`, sent without a referrer. A Content-Security-Policy in every page restricts images to this site and that host, and blocks frames, forms and other origins.
+- The only third-party requests a page makes are for YouTube thumbnails from `i.ytimg.com` and channel banners from `yt3.googleusercontent.com`, sent without a referrer. A Content-Security-Policy in every page restricts images to this site and those two hosts, and blocks frames, forms and other origins.
 - Course data comes only from reviewed YAML files in the repository, validated against a schema at build time. The CI also fails if the built pages mention any host other than the site, this repository and YouTube's image host.
 
 ## Supply chain

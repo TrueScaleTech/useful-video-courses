@@ -20,6 +20,7 @@
   --tone-grc: #5a4a1f;
   --tone-automation: #3d5a22;
   --tone-ai-security: #6a2f5a;
+  --tone-ai: #7a5a1f;
   --hang: 0 1px 2px rgb(0 0 0 / 0.14), 0 16px 28px -14px rgb(0 0 0 / 0.34);
   --hang-lift: 0 2px 4px rgb(0 0 0 / 0.16), 0 24px 36px -14px rgb(0 0 0 / 0.4);
   --max: 90rem;
@@ -326,6 +327,9 @@ main {
 }
 .cover[data-topic='ai-security'] {
   --plate-other: var(--tone-ai-security);
+}
+.cover[data-topic='ai'] {
+  --plate-other: var(--tone-ai);
 }
 .cover {
   background: color-mix(in srgb, var(--plate-other) calc(100% - var(--plate-lift)), white);
