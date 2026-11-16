@@ -298,9 +298,10 @@ main {
   object-fit: cover;
   display: block;
 }
-/* A channel banner is a very wide strip: show all of it on the topic's tone instead of cropping its sides. */
+/* A channel banner is uploaded as a 16:9 image whose important part sits in the central strip
+   (about 60% of the width). Zooming in on the middle makes that part fill the cover. */
 .cover img.banner {
-  object-fit: contain;
+  transform: scale(1.55);
 }
 .cover[data-topic='fundamentals'] {
   --plate-other: var(--tone-fundamentals);
