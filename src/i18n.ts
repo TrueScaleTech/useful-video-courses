@@ -29,6 +29,7 @@ interface Strings {
   empty: string;
   visit: string;
   visitChannel: string;
+  visitVideo: string;
   language: string;
   hours: (h: number) => string;
   free: string;
@@ -63,6 +64,7 @@ export const STRINGS: Record<Locale, Strings> = {
     empty: 'No course matches these filters.',
     visit: 'Open the course',
     visitChannel: 'Open the channel',
+    visitVideo: 'Open the video',
     language: 'Language',
     hours: (h) => `${h} h`,
     free: 'Free',
@@ -103,6 +105,7 @@ export const STRINGS: Record<Locale, Strings> = {
       automation: 'Automation',
       'ai-security': 'AI security',
       ai: 'Artificial intelligence',
+      homelab: 'Homelab',
     },
     languages: { en: 'English', it: 'Italian' },
   },
@@ -124,6 +127,7 @@ export const STRINGS: Record<Locale, Strings> = {
     empty: 'Nessun corso corrisponde ai filtri.',
     visit: 'Apri il corso',
     visitChannel: 'Apri il canale',
+    visitVideo: 'Apri il video',
     language: 'Lingua',
     hours: (h) => `${String(h).replace('.', ',')} h`,
     free: 'Gratuito',
@@ -164,6 +168,7 @@ export const STRINGS: Record<Locale, Strings> = {
       automation: 'Automazione',
       'ai-security': 'Sicurezza dell’IA',
       ai: 'Intelligenza artificiale',
+      homelab: 'Homelab',
     },
     languages: { en: 'Inglese', it: 'Italiano' },
   },

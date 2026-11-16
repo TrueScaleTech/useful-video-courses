@@ -12,6 +12,17 @@ const { course, locale } = Astro.props;
 const t = STRINGS[locale];
 const d = course.data;
 const isChannel = d.kind === 'channel';
+// A playlist is a course made of several videos; a single video is opened as "the video".
+const isPlaylist = URL.canParse(d.url) && new URL(d.url).pathname.startsWith('/playlist');
+const openLabel = isChannel ? t.visitChannel : isPlaylist ? t.visit : t.visitVideo;
+// Per-entry zoom for a banner whose artwork needs more (or less) than the default.
+const bannerStyle =
+  [
+    d.coverZoom !== undefined && `--zoom:${d.coverZoom}`,
+    d.coverFocusX !== undefined && `--focus-x:${d.coverFocusX}%`,
+  ]
+    .filter(Boolean)
+    .join(';') || undefined;
 // Only YouTube gives a stable thumbnail address; other platforms get a drawn plate.
 const thumb =
   d.cover ?? (d.platform === 'youtube' ? courseThumbnail(d.url, d.thumbnailVideoId) : null);
@@ -35,6 +46,7 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
           src={thumb}
           alt=""
           class={d.cover ? 'banner' : undefined}
+          style={d.cover ? bannerStyle : undefined}
           width="480"
           height="360"
           loading="lazy"
@@ -58,7 +70,7 @@ const newTab = locale === 'it' ? 'si apre in una nuova scheda' : 'opens in a new
     </p>
     <p class="note">{d.note[locale]}</p>
     <a class="open" href={d.url} rel="noopener noreferrer" target="_blank">
-      {isChannel ? t.visitChannel : t.visit}
+      {openLabel}
       <svg
         viewBox="0 0 14 14"
         fill="none"

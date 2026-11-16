@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-The two example entries in `src/content/courses/` are drafts and stay hidden. To see them while working on the layout:
+An entry with `draft: true` stays hidden from the built site. To see drafts while working:
 
 ```bash
 # bash
@@ -45,7 +45,7 @@ $env:SHOW_DRAFTS = '1'; npm run dev
 
 ## Adding a course
 
-Copy one of the example files in `src/content/courses/`, rename it, fill it in and set `draft: false`.
+Copy any file in `src/content/courses/`, rename it and fill it in. Use `draft: true` while you are still working on it.
 
 ```yaml
 title: Course title as shown on the original page
@@ -60,10 +60,13 @@ spoken: en # language of the course: en or it
 free: true
 note:
   en: One or two sentences of your own on why it helped.
-  it: Una o due frasi tue sul perchÃƒÂ© ÃƒÂ¨ stato utile.
+  it: Una o due frasi tue sul perché è stato utile.
 added: 2026-11-13
 draft: false
 # thumbnailVideoId: dQw4w9WgXcQ  # optional, YouTube playlists only: the video whose thumbnail to show
+# cover: https://yt3.googleusercontent.com/...=w1280  # optional, channels: the uncropped banner image
+# coverZoom: 1.9      # optional: zoom on the cover (default 1.55 for banners)
+# coverFocusX: 58     # optional: horizontal point (0-100) the zoom is centred on
 ```
 
 The schema is checked at build time, so a typo in a topic or a missing note stops the build instead of reaching the site. Write the notes yourself: do not copy descriptions from the course page.
