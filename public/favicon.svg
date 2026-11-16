@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0f766e"/><path d="M12 9.5v13l11-6.5z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .wall { fill: #141414; }
+    .mark { fill: #ee6a52; }
+    @media (prefers-color-scheme: dark) {
+      .wall { fill: #f4f4f2; }
+      .mark { fill: #c8321e; }
+    }
+  </style>
+  <rect class="wall" width="32" height="32"/>
+  <path class="mark" d="M11.5 8v16L25 16z"/>
+</svg>

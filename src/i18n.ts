@@ -46,7 +46,7 @@ export const STRINGS: Record<Locale, Strings> = {
     siteTitle: 'Useful video courses',
     tagline: 'Information security courses I found genuinely useful.',
     intro:
-      'These are YouTube video courses on security, networking, automation and much more that I found especially useful and interesting. Every link goes to the YouTube video.',
+      'These are YouTube video courses on security, networking, automation and much more that I found especially useful and interesting. Every link goes to the YouTube video or channel.',
     navCourses: 'Courses',
     navAbout: 'About',
     switchLanguage: 'Switch to Italian',
@@ -104,7 +104,7 @@ export const STRINGS: Record<Locale, Strings> = {
     siteTitle: 'Videocorsi utili',
     tagline: 'Corsi di sicurezza informatica che ho trovato davvero utili.',
     intro:
-      'Questi sono video corsi YouTube sulla sicurezza, reti, automazione e molto altro che mi sono stati particolarmente utili e ho ritenuto interessanti. Ogni link porta al video YouTube.',
+      'Questi sono video corsi YouTube sulla sicurezza, reti, automazione e molto altro che mi sono stati particolarmente utili e ho ritenuto interessanti. Ogni link porta al video/canale YouTube.',
     navCourses: 'Corsi',
     navAbout: 'Informazioni',
     switchLanguage: 'Passa all’inglese',
