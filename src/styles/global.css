@@ -309,7 +309,7 @@ main {
    change the zoom and the horizontal point it zooms around (coverZoom, coverFocusX in its file). */
 .cover img.banner {
   transform: scale(var(--zoom, 1.55));
-  transform-origin: var(--focus-x, 50%) 50%;
+  transform-origin: var(--focus-x, 50%) var(--focus-y, 50%);
 }
 .cover[data-topic='fundamentals'] {
   --plate-other: var(--tone-fundamentals);

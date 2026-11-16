@@ -20,6 +20,7 @@ const bannerStyle =
   [
     d.coverZoom !== undefined && `--zoom:${d.coverZoom}`,
     d.coverFocusX !== undefined && `--focus-x:${d.coverFocusX}%`,
+    d.coverFocusY !== undefined && `--focus-y:${d.coverFocusY}%`,
   ]
     .filter(Boolean)
     .join(';') || undefined;

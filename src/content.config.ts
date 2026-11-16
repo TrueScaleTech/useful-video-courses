@@ -55,6 +55,7 @@ const courses = defineCollection({
     // Some banners keep their artwork in a thin strip and need more zoom than the default.
     coverZoom: z.number().min(1).max(4).optional(),
     coverFocusX: z.number().min(0).max(100).optional(),
+    coverFocusY: z.number().min(0).max(100).optional(),
     level: z.enum(LEVELS),
     topics: z.array(z.enum(TOPICS)).min(1),
     hours: z.number().positive().optional(),

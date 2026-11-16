@@ -5,8 +5,9 @@ kind: channel
 url: https://www.youtube.com/@davidbombal
 cover: https://yt3.googleusercontent.com/3UvWd_e-Ji1Hp9zec2Iie8Flvmq_OQz2bEqMd2B-0IwLz7yUyBtDb-HzzBgSGAMuKE9XhDYD=w1280
 # This banner keeps its artwork in a thin strip on black, so it needs more zoom than the default.
-coverZoom: 3.3
-coverFocusX: 70
+coverZoom: 3.9
+coverFocusX: 45
+coverFocusY: 48.5
 level: beginner
 topics: [networking]
 free: true
