@@ -1,0 +1,17 @@
+title: Claude – Full Course 2026 (How to use Claude AI for beginners)
+author: AI Master
+platform: youtube
+kind: video # a YouTube playlist, shown with the type "Video"
+url: https://youtube.com/playlist?list=PLHmEk7iRj6dszZo_nqcNtYVBGgMw5THsK
+# A playlist has no single video id: this is the video whose thumbnail represents it.
+thumbnailVideoId: Fys4oHlXQmQ
+level: beginner
+topics: [ai]
+spoken: en
+free: true
+# Draft wording: replace with your own note on why it helped.
+note:
+  en: A full beginner course on using Claude, as a YouTube playlist.
+  it: Un corso completo per principianti su come usare Claude, in una playlist YouTube.
+added: 2026-11-16
+draft: false
